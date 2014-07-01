@@ -1,1 +1,3 @@
-# YouTube Video Synchronization with PubNub
+# Synchronized YouTube Vides
+
+## 

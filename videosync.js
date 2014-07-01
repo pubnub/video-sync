@@ -2,6 +2,9 @@
 
 // 
 function VideoSync(videoId, userId, roomId) {
+    if (userId == undefined) {
+        userId = Math.random().toString();
+    }
     var player;
     var pubnub;
     var channelId = videoId + roomId + "noob";

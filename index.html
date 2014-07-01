@@ -205,8 +205,8 @@
     </div>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3 padding-top text-center">
-      <a class="btn btn-primary card" href="">Github</a>
-        <a class="btn btn-primary card" href="">Zip</a>
+        <a class="btn btn-primary card" href="">Github</a>
+        <a class="btn btn-primary card" href="">Annotated Source</a>
         <a class="btn btn-primary card" href="#tutorial">Tutorial</a>
       </div>
     </div>
@@ -243,6 +243,7 @@
             <li class="code-line-wrap">
               <ol class="code-line-numbers">
                 <li>1</li>
+                <li><br></li>
                 <li>2</li>
                 <li>3</li>
                 <li>4</li>
@@ -250,28 +251,33 @@
                 <li>6</li>
                 <li>7</li>
                 <li>8</li>
+                <li>9</li>
               </ol>
             </li>
-            <li>pubnub.grant({</li>
-            <li class="indent">channel: <span class="blue">'my_channel'</span>,</li>
-            <li class="indent">auth_key: <span class="blue">'my_authkey'</span>,</li>
-            <li class="indent">read: <span class="red">true</span>,</li>
-            <li class="indent">write: <span class="red">true</span>,</li>
-            <li class="indent">ttl: <span class="blue">5</span>,</li>
-            <li class="indent">callback: <span class="blue">function</span>(m){console.log(m)}</li>
+            <li style="font-style: italic;">// Just this one line.</li>
+            <li>var <span class="blue">vidSync</span> = new VideoSync("A9HV5O8Un6k");</li>
+            <li><br></li>
+            <li>var player = new YT.player('player', {</li>
+            <li class="indent">videoId: <span class="blue">'A9HV5O8Un6k'</span>,</li>
+            <li class="indent">events: { <span class="red">true</span>,</li>
+            <li class="indent" style="padding: 0 0 0 40px">'onReady': <span class="red">vidSync.onPlayerReady</span>,</li>
+            <li class="indent" style="padding: 0 0 0 40px">'onStateChange': <span class="red">vidSync.onPlayerStateChange</span>,</li>
+            <li class="indent">}</li>
             <li>});</li>
           </ol>
         </div>
       </div>
     </div>
     <div class="col-sm-7">
-      <div class="headline h3">Headline</div>
+      <div class="headline h3">Just 1 Line of JavaScript</div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        </p><div class="ul">
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
+        Add synchronized playback to any embeddable YouTube video with 1 line of JavaScript.<br>
+        Videos will:
+        </p>
+        <div class="ul">
+          <li>Play</li>
+          <li>Pause</li>
+          <li>Seek</li>
         </div>
       <p></p>
     </div>
@@ -282,7 +288,7 @@
 <div class="section white padding-extra">
   <div class="container">
     <div class="col-sm-9">
-      <div class="headline h3">Headline</div>
+      <div class="headline h3">But How Does it Work?</div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
@@ -489,8 +495,10 @@ Add as many as youd like
         fs: 0
       };
 
-      var vidSync1 = new VideoSync("A9HV5O8Un6k", Math.random().toString());
-      var vidSync2 = new VideoSync("A9HV5O8Un6k", Math.random().toString());
+      var rand = Math.random().toString();
+
+      var vidSync1 = new VideoSync("A9HV5O8Un6k", "Player1", rand);
+      var vidSync2 = new VideoSync("A9HV5O8Un6k", "Player2", rand);
 
       var player1;
       var player2;
