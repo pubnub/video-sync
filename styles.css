@@ -1,0 +1,32 @@
+body {
+    background-color: 
+}
+
+.centered {
+    margin: 0px auto;
+    text-align: center;
+}
+
+#urlform {
+    width: 400px;
+    margin: 0px auto;
+}
+
+#player {
+    /*display:none;*/
+    margin: 0px auto;
+}
+
+#title {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 100px;
+}
+
+a #title {
+    color: darkslategrey;
+}
+
+a #title:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
