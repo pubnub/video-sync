@@ -51,4 +51,11 @@ After binding these events, you're all set to have a synched up YouTube experien
 
 ## Implementation Details
 
-So how does VideoSync work?
+So how does VideoSync work? If you would rather not dive into the [source](https://github.com/lw7360/videosync/blob/gh-pages/videosync.js) or even the [annotated source](http://larrywu.com/videosync/docs/annotated-source), I'll give a gist of how it works here.
+
+### The IFrame player API
+
+The [YouTube IFrame player API](https://developers.google.com/youtube/iframe_api_reference) has one event that we particularly care about, the `onStateChange` event. This event will fire whenever the IFrame player's state changes. All VideoSync has to do is notice when the player's state has changed, then publish the change onto the PubNub channel.
+
+## More?
+
