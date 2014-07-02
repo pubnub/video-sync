@@ -7,7 +7,7 @@ function VideoSync(videoId, userId, roomId) {
     }
     var player;
     var pubnub;
-    var channelId = videoId + roomId + "noob";
+    var channelId = videoId + roomId;
     var linkStart = false;
 
     var startSync = function() {
@@ -69,15 +69,15 @@ function VideoSync(videoId, userId, roomId) {
         var pub = function(type, time) {
             if (lastMsg !== "" + type + time) {
 
-            pubnub.publish({
-                channel: channelId,
-                message: {
-                    recipient: "",
-                    sender: userId,
-                    type: type,
-                    time: time
-                }
-            });
+                pubnub.publish({
+                    channel: channelId,
+                    message: {
+                        recipient: "",
+                        sender: userId,
+                        type: type,
+                        time: time,
+                    }
+                });
             }
         };
 
@@ -90,7 +90,6 @@ function VideoSync(videoId, userId, roomId) {
                 channel: channelId,
                 callback: function(m) {
                     if ((m.recipient === userId || m.recipient === "") && m.sender !== userId) {
-                        console.log(m.sender + ": " + JSON.stringify(m));
                         if (m.type === "updateRequest") {
                             var curState = player.getPlayerState();
                             var curTime = player.getCurrentTime();
