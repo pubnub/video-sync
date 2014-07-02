@@ -23,7 +23,7 @@ Then, use an iframe to embed the YouTube video you want to synchronize. To learn
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    <script>
+    </script>
 
 After loading the YouTube Iframe player API code, you should initialize VideoSync. When you do so you'll need the id of a YouTube video you want to play.
 
@@ -36,9 +36,11 @@ VideoSync has two publicly accessible methods, `onPlayerReady` and `onPlayerStat
             {
                 videoId: 'pRIaU172aKM',
                 events: {
-                    'onReady': vidSync.onPlayerReady,
-                    'onStateChange': vidSync.onPlayerStateChange
+                    'onReady': videosync.onPlayerReady,
+                    'onStateChange': videosync.onPlayerStateChange
                 }
             }
         });
-    }
+    };
+    
+After binding these events, you're all set to have a synched YouTube experience.
