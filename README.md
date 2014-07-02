@@ -45,7 +45,7 @@ VideoSync has two publicly accessible methods, `onPlayerReady` and `onPlayerStat
     
 After binding these events, you're all set to have a synched up YouTube experience.
 
-Here's a JSFiddle that has implemented the code we have above.
+[Here's](http://jsfiddle.net/lw7360/wU7rs/show/) a JSFiddle that has implemented the code we have above.
 
 <iframe width="100%" height="250" src="http://jsfiddle.net/lw7360/wU7rs/embedded/result,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
