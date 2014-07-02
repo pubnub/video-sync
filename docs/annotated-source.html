@@ -1,51 +1,184 @@
 <!DOCTYPE html>
-<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-<meta content="utf-8" http-equiv="encoding">
-<html>
+<html data-ember-extension="1"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<head>
-    <title>Babel - Documentation</title>
-    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-</head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="google-site-verification" content="X-NyWbTQ-1CgZ7cvLZYPOc0BzO7PblJv201J3PJXAJI">
 
-<!-- 
-░░░░░░░░░▄░░░░░░░░░░░░░░▄ 
-░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌
-░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐
-░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
-░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
-░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
-░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒▌
-░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
-░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌
-░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌
-▌▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒▐
-▐▒▒▐▀▐▀▒░▄▄▒▄▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
-▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▐ 
-░▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒░▒░▒░▒░▒▒▒▌
-░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐
-░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌
-░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
-░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
-░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀
--->
+    
+    <title>VideoSync - Annotated Source</title>
 
-<body>
-    <header>
-        <div id="links">
-            <a href="http://larrywu.com/babel/">Home</a>
-            <a href="#" class="selected">Annotated Source</a>
-            <a href="https://github.com/lw7360/babel">GitHub</a>
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.">
+    <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1.0, maximum-scale=1.5;">
+    
+
+    
+    <script type="text/javascript" src="../assets/pd.js"></script><script type="text/javascript" async="" src="../assets/inpage_linkid.js" id="undefined"></script><script type="text/javascript" async="" src="../assets/bf.min.js"></script><script type="text/javascript" async="" src="../assets/ga.js"></script><script src="../assets/30715011.js"></script>
+
+    <link rel="icon" type="image/png" href="http://www.pubnub.com/static/images/structure/favicon.png">
+
+    <link rel="stylesheet" href="http://www.pubnub.com/static/css/styles.css?ts=1404164785">
+    <!--[if lt IE 9]> <script src="/static/js/ie.js?ts=1404164785"></script> <![endif]-->
+
+    
+        
+  </head>
+
+  <body id="app" class="satemplate" data-ember-extension="1">
+
+  <header class="navbar-fixed-top card">
+
+  <div class="full-width gray hidden-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar nav-secondary">
+            <ul class="nav pull-right">
+                            <li class=""><a href="http://www.pubnub.com/company/">Company</a></li>
+              <li><a href="http://www.pubnub.com/customers/" class="">Customers</a></li>
+              <li class=""><a href="http://www.pubnub.com/events/">Events</a></li>
+              <li class=""><a href="http://www.pubnub.com/company/contact-us/">Contact</a></li>
+              <li class=""><a href="http://www.pubnub.com/blog/">Blog</a></li>
+              <li>
+                <form class="form-search" action="http://www.pubnub.com/search/">
+                  <input type="hidden" name="cx" value="016318228531359278205:tloy-ifg-ta">
+                  <input type="hidden" name="cof" value="FORID:9">
+                  <input type="hidden" name="ie" value="UTF-8">
+                  <input type="search" value="" class="searchinput full-width" name="q" placeholder="Search">
+                  <button type="submit"><i class="fa fa-search"></i><span class="hidden">Search</span></button>
+                </form>
+              </li>
+              <li id="menu-register"><a href="http://www.pubnub.com/get-started/#get-started" class="btn btn-primary btn-modal">Get Started Free</a></li>
+              <li id="menu-login"><a href="https://admin.pubnub.com/#login" target="_blank" class="btn btn-login">Log In</a></li>
+            </ul>
+          </nav>
         </div>
-        <br>
-        <div id="title">
-            <h1>Babel</h1>
-            <h2>Encrypted, Self-Destructing Messages</h2>
-        </div>
-    </header>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="navbar nav-main">
+          <h1 class="logo pull-left">
+            <a href="http://www.pubnub.com/"><img src="../assets/pubnub.png" alt="Pub Nub" width="172" height="38"></a>
+          </h1>
+          <ul class="nav pull-right hidden-xs">
+            <li><a href="http://www.pubnub.com/iot-network/">I<span style="text-transform:lowercase;">o</span>T Network</a></li>
+            <li class="dropdown-link">
+              <a href="http://www.pubnub.com/how-it-works/">How it Works</a>
+              <ul class="dropdown-list animate">
+                <li>
+                  <a href="http://www.pubnub.com/how-it-works/data-streams/">
+                    <i><img src="../assets/data-streams.png" alt="data streams icon"></i>
+                    <span>Data Streams</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/how-it-works/presence/">
+                    <i><img src="../assets/presence.png" alt="presence icon"></i>
+                    <span>Presence</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/how-it-works/storage-and-playback/">
+                    <i class="push-down"><img src="../assets/storage.png" alt="storage and playback icon"></i>
+                    <span>Storage &amp; Playback</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/how-it-works/mobile/">
+                    <i class="push-down"><img src="../assets/mobile.png" alt="mobile icon"></i>
+                    Mobile Push Gateway
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/how-it-works/analytics/">
+                    <i><img src="../assets/analytics.png" alt="analytics icon"></i>
+                    <span>Analytics</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/how-it-works/pam/">
+                    <i class="fa fa-key" style="color:#ce1126 !important;font-size: 21px;position: relative;top: 8px;"></i>
+                    <span>
+                      Access Management
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/how-it-works/security/">
+                    <i><img src="../assets/security.png" alt="security icon"></i>
+                    <span>Security</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/how-it-works/network/">
+                    <i><img src="../assets/network.png" alt="network icon"></i>
+                    Network
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown-link">
+              <a href="http://www.pubnub.com/developers/">Developers</a>
+               <ul class="dropdown-list animate">
+                <li>
+                  <a href="http://www.pubnub.com/developers/">
+                    <i class="fa fa-cogs"></i>
+                    <span>SDKs</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/console/">
+                    <i class="fa fa-terminal"></i>
+                    <span>Dev Console</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://help.pubnub.com/home" target="_blank">
+                    <i class="fa fa-question-circle"></i>
+                    <span>Support</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/documentation">
+                    <i class="fa fa-book"></i>
+                    <span>Docs</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/demos/" target="_blank">
+                    <i class="fa fa-video-camera"></i>
+                    <span>Demos</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pubnub.com/quick-start-guides/" target="_blank" style="padding-left: 13px;">
+                    <img src="../assets/quick-start-guides-red.gif" style="height: 22px; width: 22px;">
+                    <span>Quick Start</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="http://www.pubnub.com/pricing/">Pricing</a></li>
+            <li><a href="http://www.pubnub.com/in-action/">In Action</a></li>
+          </ul>
+          <ul class="nav pull-right visible-xs">
+            <li><a href="http://www.pubnub.com/how-it-works/">How it Works</a></li>
+            <li><a href="http://www.pubnub.com/pricing/">Pricing</a></li>
+            <li><a href="http://www.pubnub.com/developers/">Developers</a></li>
+            <li><a href="http://www.pubnub.com/in-action/">In Action</a></li>
+            <li><a href="http://www.pubnub.com/customers/">Customers</a></li>
+            <li><a href="http://www.pubnub.com/blog/">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</header>
 
     <script type="text/javascript">
         function setFrameHeight(frameId) {
@@ -59,51 +192,207 @@
         }
     </script>
 
-    <iframe id="docco-iframe" src="./babel.html" style="" onload="setFrameHeight('docco-iframe')"></iframe>
-    <div class="slate-blue">
-        <br>
-        <br>
-    </div>
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <h3 align="center" class="footer-title">
-            More with <a href="http://pubnub.com"> PubNub Real-Time Network </a>
-        </h3>
-                    <p align="center">
-                        Do you like this solution kit? Want to get more stuff like this?
-                        <br>Subscribe to
-                        <a target="pntwitter" href="http://twitter.com/PubNub">@PubNub</a>
-                        news and updates!
-                        <br>
-                        <BR>
-                    </p>
-                </div>
+    <iframe class="section gray padding-extra" id="docco-iframe" src="./videosync.html" style="width:100%" onload="setFrameHeight('docco-iframe')"></iframe>
 
-                <div class="col-lg-4">
-                    <div class="footer-banner">
-                        <h3 class="footer-title" align="center">
-                <a href="http://pubnub.com"><div class="pubnub-logo-footer"></div></A>
-                Real-Time Network
-            </h3>
+    <footer>
+      <div class="container">
 
-                        <div class=row-margin-small>
-                            <a class="btn btn-info btn-lg btn-block" alt="PubNub Real-Time Network" target=freetrial href="http://www.pubnub.com/free-trial">
-            Try PubNub Today!</a>
-                        </div>
+        <div class="row text-center">
 
-                    </div>
-                </div>
-            </div>
+          <div class="col-sm-9 clearfix">
+            <nav class="nav-footer">
+              <ul class="nav">
+                <li class="first"><a href="http://www.pubnub.com/how-it-works/">How It Works</a></li>
+                <li><a href="http://www.pubnub.com/how-it-works/data-streams/">Data Streams</a></li>
+                <li><a href="http://www.pubnub.com/how-it-works/presence/">Presence</a></li>
+                <li><a href="http://www.pubnub.com/how-it-works/storage-and-playback/">Storage &amp; Playback</a></li>
+                <li><a href="http://www.pubnub.com/how-it-works/mobile/">Mobile Push Gateway</a></li>
+                <li><a href="http://www.pubnub.com/how-it-works/analytics/">Analytics</a></li>
+                <li><a href="http://www.pubnub.com/how-it-works/security/">Security</a></li>
+                <li><a href="http://www.pubnub.com/how-it-works/network/">Network</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="http://www.pubnub.com/pricing/">Pricing</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="http://www.pubnub.com/developers/">Developers</a></li>
+                <li><a href="http://www.pubnub.com/docs/javascript/javascript-sdk.html">Docs</a></li>
+                <li><a href="http://www.pubnub.com/console/">Dev Console</a></li>
+                <li><a href="https://help.pubnub.com/home" target="_blank">Support</a></li>
+                <li><a href="http://www.pubnub.com/demos/">Demos</a></li>
+                <li><a href="http://www.pubnub.com/quick-start-guides/">Quick Start Guides</a></li>
+                <li><a href="http://www.pubnub.com/docs/javascript/tutorial/data-push.html">Tutorials</a></li>
+                <li><a href="http://www.pubnub.com/websockets/">Websockets</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="http://www.pubnub.com/customers/">Customers</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="http://www.pubnub.com/company/">Company</a></li>
+                <li><a href="http://www.pubnub.com/company/team/">Team</a></li>
+                <li><a href="http://www.pubnub.com/company/leadership/">Leadership</a></li>
+                <li><a href="http://www.pubnub.com/press/">Press &amp; News</a></li>
+                <li><a href="http://www.pubnub.com/events/">Events</a></li>
+                <li><a href="http://www.pubnub.com/company/careers/">Careers</a></li>
+                <li><a href="http://www.pubnub.com/company/contact-us/">Contact Us</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="http://www.pubnub.com/blog/">Blog</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-sm-3">
+            <nav class="nav-social pull-right">
+              <ul class="nav">
+                <li><a href="http://twitter.com/PubNub" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="http://www.linkedin.com/company/pubnub" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="http://www.facebook.com/PubNub" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="http://plus.google.com/116291363909949130218/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="http://www.pubnub.com/blog/feed/" target="_blank"><i class="fa fa-rss"></i></a></li>
+                <li><a href="http://vimeo.com/pubnub" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+                <li><a href="http://www.youtube.com/pubnubtv" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+              </ul>
+            </nav>
+            <nav class="nav-footer pull-right ">
+              <ul class="nav text-right">
+                <li><small>© 2009-2014 PubNub, Inc.</small></li>
+                <li><a href="http://www.pubnub.com/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                <li><a href="http://www.pubnub.com/privacy-policy/">Privacy Policy</a></li>
+              </ul>
+            </nav>
+          </div>
 
-            <h4 align="center"> <a target=signup href="http://www.pubnub.com/free-trial"> PubNub Real-Time Network Sign-up</a></h4>
         </div>
+
+      </div>
+    </footer>
+
+    <div id="get-started" class="modal-container">
+      <div class="form-wrap form-wrap-modal hide-labels">
+        <a href="http://www.pubnub.com/" class="close"><i class="fa fa-times-circle"></i></a>
+        <h3>Get Started</h3>
+        <div id="error-codes" class="alert alert-danger" style="display:none;"></div>
+<form id="sign-up-form-partial" action="https://admin.pubnub.com/api/users" method="POST" class="form-general">
+        <label for="first-name">First Name</label>
+        <input name="first" type="text" id="first-name" placeholder="First Name *" required="">
+        <label for="last-name">Last Name</label>
+        <input name="last" type="text" id="last-name" placeholder="Last Name *" required="">
+        <label for="company">Company</label>
+        <input name="company" type="text" id="company" placeholder="Company *" required="">
+        <label for="company">Phone Number</label>
+        <input name="phone" type="text" id="phone" placeholder="Phone">
+        <label for="email-2">Email</label>
+        <input name="email" type="email" id="email-2" placeholder="Email *" required="">
+        <label for="password">Password</label>
+        <input name="password" type="password" id="password" placeholder="Password *" required="">
+        <input type="hidden" value="1" name="xsite">
+        <p>By clicking <span id="create_account_text">Create Free Account</span>, you agree to <a href="http://www.pubnub.com/terms-and-conditions/" target="_blank">PubNub's terms and conditions</a>.</p>
+        <input type="submit" value="Create Free Account" id="create_account_btn" class="btn btn-primary">
+        <div id="utms">
+            <input id="utm_source" type="hidden" name="utm_source" value="">
+            <input id="utm_medium" type="hidden" name="utm_medium" value="">
+            <input id="utm_content" type="hidden" name="utm_content" value="">
+            <input id="utm_campaign" type="hidden" name="utm_campaign" value="">
+            <input id="utm_keyword" type="hidden" name="utm_keyword" value="">
+        </div>
+</form>
+      </div>
+      <div class="modal-backdrop"></div>
     </div>
 
-
+    <script src="../assets/pubnub.min.js"></script>
+    <script src="../assets/main.js"></script>
+ 
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-</body>
+    <script src="./videosync.js"></script>
+ 
+    <script>
+      var tag = document.createElement('script');
 
-</html>
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var playerVars = {
+        modestbranding: 1,
+        theme: 'light',
+        showinfo: 0,
+        rel: 0,
+        fs: 0
+      };
+
+      var rand = Math.random().toString();
+
+      var vidSync1 = new VideoSync("A9HV5O8Un6k", "Player1", rand);
+      var vidSync2 = new VideoSync("A9HV5O8Un6k", "Player2", rand);
+
+      var player1;
+      var player2;
+      function onYouTubeIframeAPIReady() {
+        player1 = new YT.Player('player1', {
+          height: '390',
+          width: '640',
+          videoId: 'A9HV5O8Un6k',
+          playerVars: playerVars,
+          events: {
+            'onReady': vidSync1.onPlayerReady,
+            'onStateChange': vidSync1.onPlayerStateChange
+          }
+        });
+        
+        player2 = new YT.Player('player2', {
+          height: '390',
+          width: '640',
+          videoId: 'A9HV5O8Un6k',
+          playerVars: playerVars,
+          events: {
+            'onReady': vidSync2.onPlayerReady,
+            'onStateChange': vidSync2.onPlayerStateChange
+          }
+        });
+      }
+
+      var pubnub = PUBNUB.init({
+          publish_key: 'demo',
+          subscribe_key: 'demo',
+          uuid: "the watcher"
+      });
+
+      pubnub.subscribe({
+        channel: "A9HV5O8Un6k" + rand,
+        callback: function(m) {
+          if (m.sender === "Player1") {
+            $("#channel1").prepend(JSON.stringify(m) + "<br>");
+          }
+          else if (m.sender === "Player2") {
+            $("#channel2").prepend(JSON.stringify(m) + "<br>");
+          }
+        }
+      });
+      </script>    
+
+    <div id="loading">
+      <div class="mask"></div>
+      <div class="indication">
+        <img src="../assets/loading.gif">
+        <h3 class="text-red">Loading...</h3>
+      </div>
+    </div>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1009365105;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="../assets/conversion.js">
+  </script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="../assets/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" style="display: none !important;">&lt;img height="1" width="1" border="0" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1009365105/?frame=0&amp;random=1404231211816&amp;cv=7&amp;fst=1404231211816&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=1440&amp;u_w=2560&amp;u_ah=1418&amp;u_aw=2560&amp;u_cd=24&amp;u_his=1&amp;u_tz=-420&amp;u_java=true&amp;u_nplug=14&amp;u_nmime=72&amp;frm=0&amp;url=http%3A//www.pubnub.com/style-guide/demo-template/&amp;ref=http%3A//getpocket.com/a/queue/" /&gt;</iframe>
+  <noscript>
+  &lt;div style="display:inline;"&gt;
+  &lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1009365105/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+  &lt;/div&gt;
+  </noscript>
+  <script type="text/javascript">var bf_url="pubnub";(function(){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="//d2sdf28wg0skh3.cloudfront.net/bf.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
+  
+
+<script type="text/javascript" src="chrome-extension://bmdblncegkenkacieihfhpjfppoconhi/in-page-script.js"></script></body></html>
