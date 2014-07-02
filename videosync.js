@@ -115,7 +115,8 @@ function VideoSync(videoId, userId, roomId) {
         }, 500);
     };
 
-
+    // Public Methods
+    // ---
     return {
         // Should be bound to the YouTube player `onReady` event.
         onPlayerReady: function (event) {
