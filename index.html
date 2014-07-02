@@ -189,23 +189,29 @@
     margin:-100px 0 0; /* negative fixed header height */
   }
   #app-hero{
-    background:url(/static/images/congruent_pentagon.png);
+    background: white;
+    background-attachment:fixed;
+  }
+  #demo{
+    background: white;
     background-attachment:fixed;
   }
 </style>
 
-<div class="section gray padding-extra" id="app-hero" style="background: url(./assets/geometry2.png)">
+<div class="section gray padding-extra" id="app-hero">
   <div class="container">
     <h1 class="text-center">Video Sync</h1>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3">
         <p class="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.        </p>
+          Synchronized YouTube Video Playback.<br>
+          So you can watch bunnies eating raspberries.  
+        </p>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3 padding-top text-center">
-        <a class="btn btn-primary card" href="">Github</a>
+        <a class="btn btn-primary card" href="https://github.com/lw7360/videosync">Github</a>
         <a class="btn btn-primary card" href="">Annotated Source</a>
         <a class="btn btn-primary card" href="#tutorial">Tutorial</a>
       </div>
@@ -213,19 +219,15 @@
   </div>
 </div>
 
-<!-- Place working demo in here -->
-<div class="section padding-extra white" id="demo" style="background: url(./assets/geometry2.png); margin-top: -100px;">
+<div class="section padding-extra white" id="demo" style="margin-top: -100px; min-height: 540px;">
   <div id="wrap" style="margin: 0 auto; display: table;">
     <div id="player1" style="margin: 15px; float: left;"></div>
     <div id="player2" style="margin: 15px; float: left;"></div>
   </div>
 </div>
 
-<!-- Place this anchor where ever the tutorial starts, often this will be directly about the first code block -->
 <a name="tutorial"></a>
 
-<!-- Code Blocks -->
-<!-- It should be pretty clear how to add or remove lines -->
 <div class="section gray padding-extra">
   <div class="container">
     <div class="col-sm-5">
@@ -243,7 +245,6 @@
             <li class="code-line-wrap">
               <ol class="code-line-numbers">
                 <li>1</li>
-                <li><br></li>
                 <li>2</li>
                 <li>3</li>
                 <li>4</li>
@@ -252,6 +253,7 @@
                 <li>7</li>
                 <li>8</li>
                 <li>9</li>
+                <li>10</li>
               </ol>
             </li>
             <li style="font-style: italic;">// Just this one line.</li>
@@ -284,7 +286,6 @@
   </div>
 </div>
 
-<!-- Text in this block will be oriented to the left  -->
 <div class="section white padding-extra">
   <div class="container">
     <div class="col-sm-9">
@@ -299,7 +300,6 @@
   </div>
 </div>
 
-<!-- Text in this block will be oriented to the right  -->
 <div class="section padding-extra gray">
   <div class="container">
     <div class="col-sm-9 pull-right">
@@ -314,7 +314,6 @@
   </div>
 </div>
 
-<!-- Text in this block will be oriented to the left  -->
 <div class="section white padding-extra">
   <div class="container">
     <div class="col-sm-9">
@@ -330,10 +329,6 @@
 </div>
 
 
-<!--
-This section is to add the relevent blog posts to this application and to display the features used by the application
-Add as many as youd like
--->
 <div class="section padding-extra gray">
   <div class="container">
     <div class="col-sm-6">
@@ -354,8 +349,6 @@ Add as many as youd like
   </div>
 </div>
 
-
-<!-- Associated JS needed for the demo can be linked here, using an iFrame to template in the demo is to be preferred though -->
 
 <section class="red">
   <div class="container">
