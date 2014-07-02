@@ -1,13 +1,27 @@
-// VideoSync
+// VideoSync is an open source API that let's you synchronize iframe embedded 
+// YouTube videos, with the [PubNub Global Realtime Network](http://www.pubnub.com)
+//
+// You can check out the demo right [here](http://larrywu.com/videosync/), or
+// view the source on [Github](https://github.com/lw7360/videosync/)
 
-// 
+// Setup
+// ---
 function VideoSync(videoId, userId, roomId) {
+    // If no userId is provided, generate a simple random one with Math.random.
     if (userId == undefined) {
         userId = Math.random().toString();
     }
+
+    // A variable that will be set to the YouTube player object.
     var player;
+
+    // PubNub
     var pubnub;
+
+    // The channel that will be subscribed to in PubNub. 
     var channelId = videoId + roomId;
+
+    // Whether the connection to the channel has been established yet.
     var linkStart = false;
 
     var startSync = function() {
