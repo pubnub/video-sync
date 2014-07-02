@@ -89,6 +89,7 @@ function VideoSync(videoId, userId, roomId) {
             pubnub.subscribe({
                 channel: channelId,
                 callback: function(m) {
+                    lastMsg = m.recipient + m.type + m.time;
                     if ((m.recipient === userId || m.recipient === "") && m.sender !== userId) {
                         if (m.type === "updateRequest") {
                             var curState = player.getPlayerState();
@@ -103,20 +104,17 @@ function VideoSync(videoId, userId, roomId) {
                             });
                         }
                         else if (m.type === "pause") {
-                        lastMsg = m.recipient + m.type + m.time;
                             player.seekTo(m.time, true);
                             time = m.time;
                             player.pauseVideo();
                         }
                         else if (m.type === "play") {
-                        lastMsg = m.recipient + m.type + m.time;
                             if (m.time !== null) {
                                 player.seekTo(m.time, true);
                             }
                             player.playVideo();
                         }
                         else if (m.type === "stop") {
-                        lastMsg = m.recipient + m.type + m.time;
                             player.stopVideo();
                         }
                     }
