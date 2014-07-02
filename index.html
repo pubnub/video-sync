@@ -205,7 +205,7 @@
       <div class="col-sm-6 col-sm-offset-3">
         <p class="text-center">
           Synchronized YouTube Video Playback.<br>
-          So you can watch bunnies eating raspberries.  
+          So you can watch bunnies eating raspberries.
         </p>
       </div>
     </div>
@@ -219,10 +219,26 @@
   </div>
 </div>
 
-<div class="section padding-extra white" id="demo" style="margin-top: -100px; min-height: 540px;">
+<div class="section padding-extra white" id="demo" style="margin-top: -100px; min-height: 0px;">
   <div id="wrap" style="margin: 0 auto; display: table;">
-    <div id="player1" style="margin: 15px; float: left;"></div>
-    <div id="player2" style="margin: 15px; float: left;"></div>
+    <div style="float: left; margin: 15px;">
+      <div id="player1"></div>
+      <div class="panel panel-default" style="margin-bottom: -30px;">
+        <div class="panel-heading">Player 1</div>
+        <div id="channel1" class="panel-body" style="height: 100px; overflow: hidden;">
+          
+        </div>
+      </div>
+    </div>
+    <div style="float: left; margin: 15px;">
+      <div id="player2"></div>
+      <div class="panel panel-default"style="margin-bottom: -30px;">
+        <div class="panel-heading">Player 2</div>
+        <div id="channel1" class="panel-body" style="height: 100px; overflow: hidden;">
+          
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -471,6 +487,7 @@
     <script src="./assets/pubnub.min.js"></script>
     <script src="./assets/main.js"></script>
  
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="./videosync.js"></script>
  
     <script>
@@ -518,6 +535,8 @@
           }
         });
       }
+
+      
     </script>    
 
     <div id="loading">

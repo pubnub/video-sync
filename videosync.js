@@ -63,20 +63,24 @@ function VideoSync(videoId, userId, roomId) {
             player.seekTo(time, true);
             keepSync();
         };
+        
+        var lastMsg;
 
-        var pub = function(action, time) {
+        var pub = function(type, time) {
+            if (lastMsg !== "" + type + time) {
+
             pubnub.publish({
                 channel: channelId,
                 message: {
                     recipient: "",
                     sender: userId,
-                    type: action,
+                    type: type,
                     time: time
                 }
             });
+            }
         };
 
-        var lastAction;
 
         var keepSync = function() {
             linkStart = true;
@@ -86,6 +90,7 @@ function VideoSync(videoId, userId, roomId) {
                 channel: channelId,
                 callback: function(m) {
                     if ((m.recipient === userId || m.recipient === "") && m.sender !== userId) {
+                        console.log(m.sender + ": " + JSON.stringify(m));
                         if (m.type === "updateRequest") {
                             var curState = player.getPlayerState();
                             var curTime = player.getCurrentTime();
@@ -99,17 +104,20 @@ function VideoSync(videoId, userId, roomId) {
                             });
                         }
                         else if (m.type === "pause") {
+                        lastMsg = m.recipient + m.type + m.time;
                             player.seekTo(m.time, true);
                             time = m.time;
                             player.pauseVideo();
                         }
                         else if (m.type === "play") {
+                        lastMsg = m.recipient + m.type + m.time;
                             if (m.time !== null) {
                                 player.seekTo(m.time, true);
                             }
                             player.playVideo();
                         }
                         else if (m.type === "stop") {
+                        lastMsg = m.recipient + m.type + m.time;
                             player.stopVideo();
                         }
                     }
