@@ -14,7 +14,7 @@
 // room for the video you're watching. 
 function VideoSync(videoId, userId, roomId) {
     // If no userId is provided, generate a simple random one with Math.random.
-    if (userId == undefined) {
+    if (userId === undefined) {
         userId = Math.random().toString();
     }
 
@@ -119,7 +119,7 @@ function VideoSync(videoId, userId, roomId) {
     return {
         // Should be bound to the YouTube player `onReady` event.
         onPlayerReady: function (event) {
-            player = event.target
+            player = event.target;
             event.target.playVideo();
             event.target.pauseVideo();
             keepSync();
@@ -137,9 +137,9 @@ function VideoSync(videoId, userId, roomId) {
                 } 
                 // Stop event.
                 else if (event.data === 0) {
-                    pub("stop", player.getCurrentTime());;
+                    pub("stop", player.getCurrentTime());
                 }
             }
         }
-    }
+    };
 }

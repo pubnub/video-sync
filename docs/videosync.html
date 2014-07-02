@@ -79,7 +79,7 @@ room for the video you’re watching. </p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span> (userId == <span class="hljs-literal">undefined</span>) {
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span> (userId === <span class="hljs-literal">undefined</span>) {
         userId = <span class="hljs-built_in">Math</span>.random().toString();
     }</pre></div></div>
             
@@ -342,7 +342,7 @@ YouTube video player has no “seek” event.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre>        onPlayerReady: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(event)</span> {</span>
-            player = event.target
+            player = event.target;
             event.target.playVideo();
             event.target.pauseVideo();
             keepSync();
@@ -412,11 +412,11 @@ YouTube video player has no “seek” event.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (event.data === <span class="hljs-number">0</span>) {
-                    pub(<span class="hljs-string">"stop"</span>, player.getCurrentTime());;
+                    pub(<span class="hljs-string">"stop"</span>, player.getCurrentTime());
                 }
             }
         }
-    }
+    };
 }</pre></div></div>
             
         </li>
