@@ -3,8 +3,15 @@
 //
 // You can check out the demo right [here](http://larrywu.com/videosync/), or
 // view the source on [Github](https://github.com/lw7360/videosync/)
+
+
 // Setup
 // ---
+// videoId is the video id of an embeddable YouTube video.
+// userId is an optional variable that will identify individual users of VideoSync.
+// roomId is an optional variable that you can set to generate a private channel
+// for your watching. If left undefined, VideoSync will connect to the default
+// room for the video you're watching. 
 function VideoSync(videoId, userId, roomId) {
     // If no userId is provided, generate a simple random one with Math.random.
     if (userId == undefined) {
@@ -23,11 +30,12 @@ function VideoSync(videoId, userId, roomId) {
     // Whether the connection to the channel has been established yet.
     var linkStart = false;
 
+    // The contents of the most recently received message.
     var lastMsg;
 
+    // A helper function that sends properly formatted YouTube messages.
     var pub = function (type, time) {
         if (lastMsg !== "" + type + time) {
-
             pubnub.publish({
                 channel: channelId,
                 message: {
@@ -40,17 +48,22 @@ function VideoSync(videoId, userId, roomId) {
         }
     };
 
-
+    // The function that keeps it all in sync. You dah real mvp.
     var keepSync = function () {
+        // [Our link has started.](https://www.youtube.com/watch?v=h7aC-TIkF3I&feature=youtu.be)
         linkStart = true;
+
+        // The initial starting time of the video we're watching.
         var time = player.getCurrentTime();
 
+        // Initializing PubNub with demo keys and our userId.
         pubnub = PUBNUB.init({
             publish_key: 'demo',
             subscribe_key: 'demo',
             uuid: userId
         });
 
+        // Subscribing to our channel.
         pubnub.subscribe({
             channel: channelId,
             callback: function (m) {
@@ -83,6 +96,10 @@ function VideoSync(videoId, userId, roomId) {
             },
             presence: function (m) {}
         });
+
+        // Intermittently check whether the video player has jumped ahead or
+        // behind further than we expected. This has to be done since the
+        // YouTube video player has no "seek" event.
         var z = setInterval(function () {
             var curTime = player.getCurrentTime();
             var curState = player.getPlayerState();
@@ -100,19 +117,26 @@ function VideoSync(videoId, userId, roomId) {
 
 
     return {
+        // Should be bound to the YouTube player `onReady` event.
         onPlayerReady: function (event) {
             player = event.target
             event.target.playVideo();
             event.target.pauseVideo();
             keepSync();
         },
+        // Should be bound to the YouTube player `onStateChange` event.
         onPlayerStateChange: function (event) {
             if (linkStart) {
-                if (event.data === 2) { // pause
+                // Pause event.
+                if (event.data === 2) {
                     pub("pause", player.getCurrentTime());
-                } else if (event.data === 1) { // play
+                }
+                // Play event.
+                else if (event.data === 1) {
                     pub("play", null);
-                } else if (event.data === 0) { // stop
+                } 
+                // Stop event.
+                else if (event.data === 0) {
                     pub("stop", player.getCurrentTime());;
                 }
             }
