@@ -2,7 +2,7 @@
 
 ## Introduction
 
-VideoSync is an API that makes it easy to synchronize playback for embeddable YouTube videos. Play, pause, and seek in synch across multiple YouTube players.
+VideoSync is an API that makes it easy to synchronize playback for embeddable YouTube videos across multiples browsers. Play, pause, and seek in synch across multiple YouTube players.
 
 ### [Live Demo](http://larrywu.com/videosync/)
 
