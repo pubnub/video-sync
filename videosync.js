@@ -7,12 +7,9 @@
 
 // Setup
 // ---
-// videoId is the video id of an embeddable YouTube video.
+// roomId is the name of the channel you want to use.
 // userId is an optional variable that will identify individual users of VideoSync.
-// roomId is an optional variable that you can set to generate a private channel
-// for your watching. If left undefined, VideoSync will connect to the default
-// room for the video you're watching. 
-function VideoSync(videoId, userId, roomId) {
+function VideoSync(roomId, userId) {
     // If no userId is provided, generate a simple random one with Math.random.
     if (userId === undefined) {
         userId = Math.random().toString();
@@ -24,9 +21,6 @@ function VideoSync(videoId, userId, roomId) {
     // PubNub
     var pubnub;
 
-    // The channel that will be subscribed to in PubNub. 
-    var channelId = videoId + roomId;
-
     // Whether the connection to the channel has been established yet.
     var linkStart = false;
 
@@ -37,7 +31,7 @@ function VideoSync(videoId, userId, roomId) {
     var pub = function (type, time) {
         if (lastMsg !== "" + type + time) {
             pubnub.publish({
-                channel: channelId,
+                channel: roomId,
                 message: {
                     recipient: "",
                     sender: userId,
@@ -65,7 +59,7 @@ function VideoSync(videoId, userId, roomId) {
 
         // Subscribing to our channel.
         pubnub.subscribe({
-            channel: channelId,
+            channel: roomId,
             callback: function (m) {
                 lastMsg = m.recipient + m.type + m.time;
                 if ((m.recipient === userId || m.recipient === "") && m.sender !== userId) {
@@ -73,7 +67,7 @@ function VideoSync(videoId, userId, roomId) {
                         var curState = player.getPlayerState();
                         var curTime = player.getCurrentTime();
                         pubnub.publish({
-                            channel: channelId,
+                            channel: roomId,
                             message: {
                                 type: "updateResponse",
                                 time: curTime,
