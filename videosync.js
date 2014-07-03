@@ -83,8 +83,6 @@ function VideoSync(roomId, userId) {
                             player.seekTo(m.time, true);
                         }
                         player.playVideo();
-                    } else if (m.type === "stop") {
-                        player.stopVideo();
                     }
                 }
             },
@@ -130,10 +128,6 @@ function VideoSync(roomId, userId) {
                 else if (event.data === 1) {
                     pub("play", null);
                 } 
-                // Stop event.
-                else if (event.data === 0) {
-                    pub("stop", player.getCurrentTime());
-                }
             }
         }
     };
