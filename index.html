@@ -277,14 +277,15 @@
                 <li>10</li>
               </ol>
             </li>
-            <li style="font-style: italic;">// Just this one line.</li>
-            <li>var <span class="blue">vidSync</span> = new VideoSync("A9HV5O8Un6k");</li>
+            <li style="font-style: italic;">// Initialize VideoSync</li>
+            <li>var <span class="blue">sync</span> = new VideoSync("RoomName", "UserName");</li>
             <li><br></li>
             <li>var player = new YT.player('player', {</li>
-            <li class="indent">videoId: <span class="blue">'A9HV5O8Un6k'</span>,</li>
-            <li class="indent">events: { <span class="red"></span></li>
-            <li class="indent" style="padding: 0 0 0 40px">'onReady': <span class="red">vidSync.onPlayerReady</span>,</li>
-            <li class="indent" style="padding: 0 0 0 40px">'onStateChange': <span class="red">vidSync.onPlayerStateChange</span></li>
+            <li class="indent">videoId: <span class="red">'A9HV5O8Un6k'</span>, // The Video ID</li>
+            <li class="indent">events: { </li>
+            <li class="indent" style="padding: 0 0 0 40px"><span style="font-style: italic;">// Bind these 2 methods.</span></li>
+            <li class="indent" style="padding: 0 0 0 40px">'onReady': <span class="blue">sync.onPlayerReady</span>,</li>
+            <li class="indent" style="padding: 0 0 0 40px">'onStateChange': <span class="blue">sync.onPlayerStateChange</span></li>
             <li class="indent">}</li>
             <li>});</li>
           </ol>
@@ -292,16 +293,9 @@
       </div>
     </div>
     <div class="col-sm-7">
-      <div class="headline h3">Just 1 Line of JavaScript!</div>
+      <div class="headline h3">Adding Synchronized Playback.</div>
       <p>
-        Add synchronized playback to any embeddable YouTube video with 1 line of JavaScript.<br><br>
-        Then videos will be:
-        </p>
-        <div class="ul">
-          <li>Played together</li>
-          <li>Paused together</li>
-          <li>Seeked together</li>
-        </div>
+        Add synchronized playback to any embeddable YouTube video with just one line of JavaScript.<br><br>
       <p></p>
     </div>
   </div>
