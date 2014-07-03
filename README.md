@@ -89,5 +89,18 @@ You may also have noticed that there's no "seeking" state or event, like when a 
         prevTime = curTime;
     }, 500); // Check the progress every 500 milliseconds.
 
+Now that we can detect the three important video player state changes that we care about, we can actually synchronize playback across players. All we have to do is publish the event that just happened onto a PubNub channel that other watchers are subscribed to. Then when you receive a message, you can act accordingly.
+
+    // event is the type of event that occurred (play, pause, or seek)
+    // time is the time of the video when the event occurred.
+    var publishState = function(event, time) {
+        pubnub.publish({
+            channel: "Some Channel",
+            event: event,
+            time: time,
+        });
+    };
+
+
 ## More?
 
