@@ -275,11 +275,14 @@
                 <li>8</li>
                 <li>9</li>
                 <li>10</li>
+                <li>11</li>
+                <li>12</li>
               </ol>
             </li>
             <li style="font-style: italic;">// Initialize VideoSync</li>
             <li>var <span class="blue">sync</span> = new VideoSync("RoomName", "UserName");</li>
             <li><br></li>
+            <li><span style="font-style: italic;"> // Your standard YouTube embed code.</span></li>
             <li>var player = new YT.player('player', {</li>
             <li class="indent">videoId: <span class="red">'A9HV5O8Un6k'</span>, // The Video ID</li>
             <li class="indent">events: { </li>
@@ -295,8 +298,11 @@
     <div class="col-sm-7">
       <div class="headline h3">Adding Synchronized Playback.</div>
       <p>
-        Add synchronized playback to any embeddable YouTube video with just one line of JavaScript.<br><br>
-      <p></p>
+        You can add synchronized playback to Embedded YouTube videos with two simple steps. <br>
+        First, initialize a VideoSync object by passing in a room name and a user name. <br>
+        Then, all you have to do is bind two  of VideoSync's methods to two event callbacks in your standard YouTube embed code.<br>
+        Voilà, you now have synchronized videos!
+      </p>
     </div>
   </div>
 </div>
@@ -306,7 +312,7 @@
     <div class="col-sm-9">
       <div class="headline h3">But How Does it Work?</div>
       <p>
-        With YouTube's <a href="https://developers.google.com/youtube/iframe_api_reference">iframe API</a> you can bind callbacks to changes to the state of the embedded YouTube player. These events are like when a video is paused by the user. VideoSync binds itself to two YouTube callbacks, <code>onReady</code> and <code>onStateChange</code>,  and publishes when these events happen onto a PubNub channel. If you'd like to learn more about how VideoSync works, check out the <a href="">annotated source</a> and this more detailed <a href="">blog post</a>.
+        With YouTube's <a href="https://developers.google.com/youtube/iframe_api_reference">iframe API</a> you can bind callbacks to changes to the state of the embedded YouTube player. These events are like when a video is paused by the user. VideoSync binds itself to two YouTube callbacks, <code>onReady</code> and <code>onStateChange</code>,  and publishes when these events happen onto a PubNub channel. If you'd like to learn more about how VideoSync works, check out the <a href="http://larrywu.com/videosync/docs/annotated-source">annotated source</a> and the more detailed <a href="https://github.com/lw7360/videosync/blob/gh-pages/README.md">README</a>.
       </p>
     </div>
     <div class="col-sm-3">
