@@ -6,9 +6,12 @@ VideoSync is an API that makes it easy to synchronize playback for embeddable Yo
 
 ### [Live Demo](http://larrywu.com/videosync/)
 
+### [GitHub Repo](https://github.com/lw7360/videosync)
+
 ## Getting Started
 
-Import the PubNub SDK and videosync.js.
+VideoSync uses the PubNub Global Realtime Network, so to get started you'll have to
+import the PubNub SDK and videosync.js.
 
     <script src="http://cdn.pubnub.com/pubnub.min.js"></script>
     <script src=./videosync.js></script>
