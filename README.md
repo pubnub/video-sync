@@ -57,5 +57,17 @@ So how does VideoSync work? If you would rather not dive into the [source](https
 
 The [YouTube IFrame player API](https://developers.google.com/youtube/iframe_api_reference) has one event that we particularly care about, the `onStateChange` event. This event will fire whenever the IFrame player's state changes. All VideoSync has to do is notice when the player's state has changed, then publish the change onto the PubNub channel.
 
+There are YouTube player has 6 possible states, which are represented as 6 different integers.
+
+* -1 (unstarted)
+* 0 (ended)
+* 1 (playing)
+* 2 (paused)
+* 3 (buffering)
+* 5 (video cued)
+
+Of these six, we really only care about state 1 (playing) and state 2 (paused). You may also have noticed that there's no "seeking" state or event, like when a user jumps forward or backwards in a video by clicking in the progress bar. In order to detect when a user has jumped forwards in time, we're going to need to intermittently check the current 
+
+
 ## More?
 
