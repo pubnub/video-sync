@@ -182,8 +182,8 @@
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
         $(function() {
-            var $frame = $('    <iframe class="section" id="docco-iframe" src="./videosync.html" style="width:100%; background-color: #f5cfd3;" onload="setFrameHeight('docco-iframe')"></iframe>');
-            $('body').html( $frame );
+            var $frame = $('<iframe class="section" id="docco-iframe" src="./videosync.html" style="width:100%; background-color: #f5cfd3;" onload="setFrameHeight("docco-iframe")"></iframe>');
+            $('header').after( $frame );
             setTimeout( function() {
                 var doc = $frame[0].contentWindow.document;
                 var $body = $('body',doc);
@@ -309,7 +309,6 @@
       <div class="modal-backdrop"></div>
     </div>
 
-    <script src="../assets/pubnub.min.js"></script>
     <script src="../assets/main.js"></script>
  
 
