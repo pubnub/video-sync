@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html data-ember-extension="1"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -181,15 +180,6 @@
 </header>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
-        $(function() {
-            var $frame = $('<iframe class="section" id="docco-iframe" src="./videosync.html" style="width:100%; background-color: #f5cfd3;" onload="setFrameHeight("docco-iframe")"></iframe>');
-            $('header').after( $frame );
-            setTimeout( function() {
-                var doc = $frame[0].contentWindow.document;
-                var $body = $('body',doc);
-            }, 1 );
-        });
-
         function setFrameHeight(frameId) {
             try {
                 var frame = document.getElementById(frameId);
@@ -199,6 +189,16 @@
                 }
             } catch (err) {}
         }
+        
+        $(function() {
+            var $frame = $('<iframe class="section" id="docco-iframe" src="./videosync.html" style="width:100%; background-color: #f5cfd3;" onload="setFrameHeight(' + "'" + 'docco-iframe' + "'" + ')"></iframe>');
+            $('header').after( $frame );
+            setTimeout( function() {
+                var doc = $frame[0].contentWindow.document;
+                var $body = $('body',doc);
+            }, 1 );
+        });
+
     </script>
 
 
@@ -309,6 +309,7 @@
       <div class="modal-backdrop"></div>
     </div>
 
+    <script src="../assets/pubnub.min.js"></script>
     <script src="../assets/main.js"></script>
  
 
