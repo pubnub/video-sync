@@ -179,8 +179,17 @@
   </div>
 
 </header>
-
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
+        $(function() {
+            var $frame = $('    <iframe class="section" id="docco-iframe" src="./videosync.html" style="width:100%; background-color: #f5cfd3;" onload="setFrameHeight('docco-iframe')"></iframe>');
+            $('body').html( $frame );
+            setTimeout( function() {
+                var doc = $frame[0].contentWindow.document;
+                var $body = $('body',doc);
+            }, 1 );
+        });
+
         function setFrameHeight(frameId) {
             try {
                 var frame = document.getElementById(frameId);
@@ -192,7 +201,7 @@
         }
     </script>
 
-    <iframe class="section" id="docco-iframe" src="./videosync.html" style="width:100%; background-color: #f5cfd3;" onload="setFrameHeight('docco-iframe')"></iframe>
+
 
     <footer>
       <div class="container">
@@ -303,73 +312,6 @@
     <script src="../assets/pubnub.min.js"></script>
     <script src="../assets/main.js"></script>
  
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="./videosync.js"></script>
- 
-    <script>
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      var playerVars = {
-        modestbranding: 1,
-        theme: 'light',
-        showinfo: 0,
-        rel: 0,
-        fs: 0
-      };
-
-      var rand = Math.random().toString();
-
-      var vidSync1 = new VideoSync("A9HV5O8Un6k", "Player1", rand);
-      var vidSync2 = new VideoSync("A9HV5O8Un6k", "Player2", rand);
-
-      var player1;
-      var player2;
-      function onYouTubeIframeAPIReady() {
-        player1 = new YT.Player('player1', {
-          height: '390',
-          width: '640',
-          videoId: 'A9HV5O8Un6k',
-          playerVars: playerVars,
-          events: {
-            'onReady': vidSync1.onPlayerReady,
-            'onStateChange': vidSync1.onPlayerStateChange
-          }
-        });
-        
-        player2 = new YT.Player('player2', {
-          height: '390',
-          width: '640',
-          videoId: 'A9HV5O8Un6k',
-          playerVars: playerVars,
-          events: {
-            'onReady': vidSync2.onPlayerReady,
-            'onStateChange': vidSync2.onPlayerStateChange
-          }
-        });
-      }
-
-      var pubnub = PUBNUB.init({
-          publish_key: 'demo',
-          subscribe_key: 'demo',
-          uuid: "the watcher"
-      });
-
-      pubnub.subscribe({
-        channel: "A9HV5O8Un6k" + rand,
-        callback: function(m) {
-          if (m.sender === "Player1") {
-            $("#channel1").prepend(JSON.stringify(m) + "<br>");
-          }
-          else if (m.sender === "Player2") {
-            $("#channel2").prepend(JSON.stringify(m) + "<br>");
-          }
-        }
-      });
-      </script>    
 
     <div id="loading">
       <div class="mask"></div>
