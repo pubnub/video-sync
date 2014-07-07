@@ -1,438 +1,488 @@
 <!DOCTYPE html>
-<html data-ember-extension="1"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html data-ember-extension="1">
+<!--<![endif]-->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="google-site-verification" content="X-NyWbTQ-1CgZ7cvLZYPOc0BzO7PblJv201J3PJXAJI">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    
-    <title>VideoSync</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="google-site-verification" content="X-NyWbTQ-1CgZ7cvLZYPOc0BzO7PblJv201J3PJXAJI">
 
-    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.">
-    <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1.0, maximum-scale=1.5;">
-    
 
-    
-    <script type="text/javascript" src="./assets/pd.js"></script><script type="text/javascript" async="" src="./assets/inpage_linkid.js" id="undefined"></script><script type="text/javascript" async="" src="./assets/bf.min.js"></script><script type="text/javascript" async="" src="./assets/ga.js"></script><script src="./assets/30715011.js"></script>
+  <title>VideoSync</title>
 
-    <link rel="icon" type="image/png" href="http://www.pubnub.com/static/images/structure/favicon.png">
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.">
+  <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1.0, maximum-scale=1.5;">
 
-    <link rel="stylesheet" href="http://www.pubnub.com/static/css/styles.css?ts=1404164785">
-    <!--[if lt IE 9]> <script src="/static/js/ie.js?ts=1404164785"></script> <![endif]-->
 
-    
-        
-  </head>
 
-  <body id="app" class="satemplate" data-ember-extension="1">
+  <script type="text/javascript" src="./assets/pd.js"></script>
+  <script type="text/javascript" async="" src="./assets/inpage_linkid.js" id="undefined"></script>
+  <script type="text/javascript" async="" src="./assets/bf.min.js"></script>
+  <script type="text/javascript" async="" src="./assets/ga.js"></script>
+  <script src="./assets/30715011.js"></script>
+
+  <link rel="icon" type="image/png" href="http://www.pubnub.com/static/images/structure/favicon.png">
+
+  <link rel="stylesheet" href="http://www.pubnub.com/static/css/styles.css?ts=1404164785">
+  <!--[if lt IE 9]> <script src="/static/js/ie.js?ts=1404164785"></script> <![endif]-->
+
+
+
+</head>
+
+<body id="app" class="satemplate" data-ember-extension="1">
 
   <header class="navbar-fixed-top card">
 
-  <div class="full-width gray hidden-xs">
+    <div class="full-width gray hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar nav-secondary">
+              <ul class="nav pull-right">
+                <li class=""><a href="http://www.pubnub.com/company/">Company</a>
+                </li>
+                <li><a href="http://www.pubnub.com/customers/" class="">Customers</a>
+                </li>
+                <li class=""><a href="http://www.pubnub.com/events/">Events</a>
+                </li>
+                <li class=""><a href="http://www.pubnub.com/company/contact-us/">Contact</a>
+                </li>
+                <li class=""><a href="http://www.pubnub.com/blog/">Blog</a>
+                </li>
+                <li>
+                  <form class="form-search" action="http://www.pubnub.com/search/">
+                    <input type="hidden" name="cx" value="016318228531359278205:tloy-ifg-ta">
+                    <input type="hidden" name="cof" value="FORID:9">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <input type="search" value="" class="searchinput full-width" name="q" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search"></i><span class="hidden">Search</span>
+                    </button>
+                  </form>
+                </li>
+                <li id="menu-register"><a href="http://www.pubnub.com/get-started/#get-started" class="btn btn-primary btn-modal">Get Started Free</a>
+                </li>
+                <li id="menu-login"><a href="https://admin.pubnub.com/#login" target="_blank" class="btn btn-login">Log In</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <nav class="navbar nav-secondary">
-            <ul class="nav pull-right">
-                            <li class=""><a href="http://www.pubnub.com/company/">Company</a></li>
-              <li><a href="http://www.pubnub.com/customers/" class="">Customers</a></li>
-              <li class=""><a href="http://www.pubnub.com/events/">Events</a></li>
-              <li class=""><a href="http://www.pubnub.com/company/contact-us/">Contact</a></li>
-              <li class=""><a href="http://www.pubnub.com/blog/">Blog</a></li>
-              <li>
-                <form class="form-search" action="http://www.pubnub.com/search/">
-                  <input type="hidden" name="cx" value="016318228531359278205:tloy-ifg-ta">
-                  <input type="hidden" name="cof" value="FORID:9">
-                  <input type="hidden" name="ie" value="UTF-8">
-                  <input type="search" value="" class="searchinput full-width" name="q" placeholder="Search">
-                  <button type="submit"><i class="fa fa-search"></i><span class="hidden">Search</span></button>
-                </form>
+          <nav class="navbar nav-main">
+            <h1 class="logo pull-left">
+            <a href="http://www.pubnub.com/"><img src="./assets/pubnub.png" alt="Pub Nub" width="172" height="38"></a>
+          </h1>
+            <ul class="nav pull-right hidden-xs">
+              <li><a href="http://www.pubnub.com/iot-network/">I<span style="text-transform:lowercase;">o</span>T Network</a>
               </li>
-              <li id="menu-register"><a href="http://www.pubnub.com/get-started/#get-started" class="btn btn-primary btn-modal">Get Started Free</a></li>
-              <li id="menu-login"><a href="https://admin.pubnub.com/#login" target="_blank" class="btn btn-login">Log In</a></li>
+              <li class="dropdown-link">
+                <a href="http://www.pubnub.com/how-it-works/">How it Works</a>
+                <ul class="dropdown-list animate">
+                  <li>
+                    <a href="http://www.pubnub.com/how-it-works/data-streams/">
+                      <i><img src="./assets/data-streams.png" alt="data streams icon"></i>
+                      <span>Data Streams</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/how-it-works/presence/">
+                      <i><img src="./assets/presence.png" alt="presence icon"></i>
+                      <span>Presence</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/how-it-works/storage-and-playback/">
+                      <i class="push-down"><img src="./assets/storage.png" alt="storage and playback icon"></i>
+                      <span>Storage &amp; Playback</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/how-it-works/mobile/">
+                      <i class="push-down"><img src="./assets/mobile.png" alt="mobile icon"></i>
+                      Mobile Push Gateway
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/how-it-works/analytics/">
+                      <i><img src="./assets/analytics.png" alt="analytics icon"></i>
+                      <span>Analytics</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/how-it-works/pam/">
+                      <i class="fa fa-key" style="color:#ce1126 !important;font-size: 21px;position: relative;top: 8px;"></i>
+                      <span>
+                      Access Management
+                    </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/how-it-works/security/">
+                      <i><img src="./assets/security.png" alt="security icon"></i>
+                      <span>Security</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/how-it-works/network/">
+                      <i><img src="./assets/network.png" alt="network icon"></i>
+                      Network
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-link">
+                <a href="http://www.pubnub.com/developers/">Developers</a>
+                <ul class="dropdown-list animate">
+                  <li>
+                    <a href="http://www.pubnub.com/developers/">
+                      <i class="fa fa-cogs"></i>
+                      <span>SDKs</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/console/">
+                      <i class="fa fa-terminal"></i>
+                      <span>Dev Console</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://help.pubnub.com/home" target="_blank">
+                      <i class="fa fa-question-circle"></i>
+                      <span>Support</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/documentation">
+                      <i class="fa fa-book"></i>
+                      <span>Docs</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/demos/" target="_blank">
+                      <i class="fa fa-video-camera"></i>
+                      <span>Demos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.pubnub.com/quick-start-guides/" target="_blank" style="padding-left: 13px;">
+                      <img src="./assets/quick-start-guides-red.gif" style="height: 22px; width: 22px;">
+                      <span>Quick Start</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="http://www.pubnub.com/pricing/">Pricing</a>
+              </li>
+              <li><a href="http://www.pubnub.com/in-action/">In Action</a>
+              </li>
+            </ul>
+            <ul class="nav pull-right visible-xs">
+              <li><a href="http://www.pubnub.com/how-it-works/">How it Works</a>
+              </li>
+              <li><a href="http://www.pubnub.com/pricing/">Pricing</a>
+              </li>
+              <li><a href="http://www.pubnub.com/developers/">Developers</a>
+              </li>
+              <li><a href="http://www.pubnub.com/in-action/">In Action</a>
+              </li>
+              <li><a href="http://www.pubnub.com/customers/">Customers</a>
+              </li>
+              <li><a href="http://www.pubnub.com/blog/">Blog</a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <nav class="navbar nav-main">
-          <h1 class="logo pull-left">
-            <a href="http://www.pubnub.com/"><img src="./assets/pubnub.png" alt="Pub Nub" width="172" height="38"></a>
-          </h1>
-          <ul class="nav pull-right hidden-xs">
-            <li><a href="http://www.pubnub.com/iot-network/">I<span style="text-transform:lowercase;">o</span>T Network</a></li>
-            <li class="dropdown-link">
-              <a href="http://www.pubnub.com/how-it-works/">How it Works</a>
-              <ul class="dropdown-list animate">
-                <li>
-                  <a href="http://www.pubnub.com/how-it-works/data-streams/">
-                    <i><img src="./assets/data-streams.png" alt="data streams icon"></i>
-                    <span>Data Streams</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/how-it-works/presence/">
-                    <i><img src="./assets/presence.png" alt="presence icon"></i>
-                    <span>Presence</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/how-it-works/storage-and-playback/">
-                    <i class="push-down"><img src="./assets/storage.png" alt="storage and playback icon"></i>
-                    <span>Storage &amp; Playback</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/how-it-works/mobile/">
-                    <i class="push-down"><img src="./assets/mobile.png" alt="mobile icon"></i>
-                    Mobile Push Gateway
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/how-it-works/analytics/">
-                    <i><img src="./assets/analytics.png" alt="analytics icon"></i>
-                    <span>Analytics</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/how-it-works/pam/">
-                    <i class="fa fa-key" style="color:#ce1126 !important;font-size: 21px;position: relative;top: 8px;"></i>
-                    <span>
-                      Access Management
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/how-it-works/security/">
-                    <i><img src="./assets/security.png" alt="security icon"></i>
-                    <span>Security</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/how-it-works/network/">
-                    <i><img src="./assets/network.png" alt="network icon"></i>
-                    Network
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown-link">
-              <a href="http://www.pubnub.com/developers/">Developers</a>
-               <ul class="dropdown-list animate">
-                <li>
-                  <a href="http://www.pubnub.com/developers/">
-                    <i class="fa fa-cogs"></i>
-                    <span>SDKs</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/console/">
-                    <i class="fa fa-terminal"></i>
-                    <span>Dev Console</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://help.pubnub.com/home" target="_blank">
-                    <i class="fa fa-question-circle"></i>
-                    <span>Support</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/documentation">
-                    <i class="fa fa-book"></i>
-                    <span>Docs</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/demos/" target="_blank">
-                    <i class="fa fa-video-camera"></i>
-                    <span>Demos</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.pubnub.com/quick-start-guides/" target="_blank" style="padding-left: 13px;">
-                    <img src="./assets/quick-start-guides-red.gif" style="height: 22px; width: 22px;">
-                    <span>Quick Start</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="http://www.pubnub.com/pricing/">Pricing</a></li>
-            <li><a href="http://www.pubnub.com/in-action/">In Action</a></li>
-          </ul>
-          <ul class="nav pull-right visible-xs">
-            <li><a href="http://www.pubnub.com/how-it-works/">How it Works</a></li>
-            <li><a href="http://www.pubnub.com/pricing/">Pricing</a></li>
-            <li><a href="http://www.pubnub.com/developers/">Developers</a></li>
-            <li><a href="http://www.pubnub.com/in-action/">In Action</a></li>
-            <li><a href="http://www.pubnub.com/customers/">Customers</a></li>
-            <li><a href="http://www.pubnub.com/blog/">Blog</a></li>
-          </ul>
-        </nav>
+  </header>
+
+  <div id="alert_container" class="alert  hidden"></div>
+  <style media="screen">
+    a[name=tutorial]:before {
+      content: "";
+      display: block;
+      height: 100px;
+      /* fixed header height*/
+      margin: -100px 0 0;
+      /* negative fixed header height */
+    }
+    #app-hero {
+      background: white;
+      background-attachment: fixed;
+    }
+    #demo {
+      background: white;
+      background-attachment: fixed;
+    }
+    .code {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 15px;
+    }
+  </style>
+
+  <div class="section gray padding-extra" id="app-hero">
+    <div class="container">
+      <h1 class="text-center">VideoSync</h1>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3" style="margin-bottom: -40px;">
+          <p class="text-center">
+            Synchronized YouTube Video Playback.
+            <br>So you and your friends can watch a bunny eating raspberries.
+            <br>Together.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 padding-top text-center">
+          <a class="btn btn-primary card" href="https://github.com/lw7360/videosync">Github</a>
+          <a class="btn btn-primary card" href="./docs/annotated-source">Annotated Source</a>
+          <a class="btn btn-primary card" href="#tutorial">Tutorial</a>
+        </div>
       </div>
     </div>
   </div>
 
-</header>
+  <div class="section padding-extra white" id="demo" style="margin-top: -100px; min-height: 0px;">
+    <div id="wrap" style="margin: 0 auto; display: table;">
+      <div style="float: left; margin: 15px;">
+        <div id="player1"></div>
+        <div class="panel panel-default" style="margin-bottom: -30px;">
+          <div class="panel-heading">Video Player 1's Publish Stream:</div>
+          <div id="channel1" class="panel-body code" style="height: 100px; overflow: hidden;">
 
-<div id="alert_container" class="alert  hidden"></div>
-<style media="screen">
-  a[name=tutorial]:before {
-    content:"";
-    display:block;
-    height:100px; /* fixed header height*/
-    margin:-100px 0 0; /* negative fixed header height */
-  }
-  #app-hero{
-    background: white;
-    background-attachment:fixed;
-  }
-  #demo{
-    background: white;
-    background-attachment:fixed;
-  }
-  .code{
-    font-family: "Courier New", Courier, monospace;
-    font-size: 15px;
-  }
-</style>
+          </div>
+        </div>
+      </div>
+      <div style="float: left; margin: 15px;">
+        <div id="player2"></div>
+        <div class="panel panel-default" style="margin-bottom: -30px;">
+          <div class="panel-heading">Video Player 2's Publish Stream:</div>
+          <div id="channel2" class="panel-body code" style="height: 100px; overflow: hidden;">
 
-<div class="section gray padding-extra" id="app-hero">
-  <div class="container">
-    <h1 class="text-center">VideoSync</h1>
-    <div class="row">
-      <div class="col-sm-6 col-sm-offset-3" style="margin-bottom: -40px;">
-        <p class="text-center">
-          Synchronized YouTube Video Playback.<br>
-          So you and your friends can watch a bunny eating raspberries.<br>
-          Together.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a name="tutorial"></a>
+
+  <div class="section gray padding-extra">
+    <div class="container">
+      <div class="col-sm-5">
+        <div class="code-wrap flex">
+          <div class="code-header">
+            <ul>
+              <li class="red"><i class="fa fa-circle"></i>
+              </li>
+              <li class="yellow"><i class="fa fa-circle"></i>
+              </li>
+              <li class="green"><i class="fa fa-circle"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="code-content">
+
+            <ol class="list-code animate" data-type="one">
+              <li class="code-line-wrap">
+                <ol class="code-line-numbers">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li>10</li>
+                  <li>11</li>
+                  <li>12</li>
+                </ol>
+              </li>
+              <li style="font-style: italic;">// Initialize VideoSync</li>
+              <li>var <span class="blue">sync</span> = new VideoSync("RoomName", "UserName");</li>
+              <li>
+                <br>
+              </li>
+              <li><span style="font-style: italic;"> // Your standard YouTube embed code.</span>
+              </li>
+              <li>var player = new YT.player('player', {</li>
+              <li class="indent">videoId: <span class="red">'A9HV5O8Un6k'</span>, // The Video ID</li>
+              <li class="indent">events: {</li>
+              <li class="indent" style="padding: 0 0 0 40px"><span style="font-style: italic;">// Bind these 2 methods.</span>
+              </li>
+              <li class="indent" style="padding: 0 0 0 40px">'onReady': <span class="blue">sync.onPlayerReady</span>,</li>
+              <li class="indent" style="padding: 0 0 0 40px">'onStateChange': <span class="blue">sync.onPlayerStateChange</span>
+              </li>
+              <li class="indent">}</li>
+              <li>});</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-7">
+        <div class="headline h3">Adding Synchronized Playback.</div>
+        <p>
+          You can add synchronized playback to Embedded YouTube videos with two simple steps.
+          <br>First, initialize a VideoSync object by passing in a room name and a user name.
+          <br>Then, all you have to do is bind two of VideoSync's methods to two event callbacks in your standard YouTube embed code.
+          <br>Voilà, you now have synchronized videos!
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-6 col-sm-offset-3 padding-top text-center">
-        <a class="btn btn-primary card" href="https://github.com/lw7360/videosync">Github</a>
-        <a class="btn btn-primary card" href="./docs/annotated-source">Annotated Source</a>
-        <a class="btn btn-primary card" href="#tutorial">Tutorial</a>
+  </div>
+
+  <div class="section white padding-extra">
+    <div class="container">
+      <div class="col-sm-9">
+        <div class="headline h3">But How Does it Work?</div>
+        <p>
+          YouTube's <a href="https://developers.google.com/youtube/iframe_api_reference">iFrame API</a> allows you to bind callbacks to changes to the state of the embedded YouTube player. When you initialize VideoSync, you bind VideoSync methods to the <code>onReady</code> event and the <code>onStateChange</code> event. When important state change events occur, they are published through the PubNub Global RealTime Network, and then other VideoSync clients will act accordingly. If you'd like to learn more about how VideoSync works, check out the <a href="http://larrywu.com/videosync/docs/annotated-source">annotated source</a> and the more detailed <a href="https://github.com/lw7360/videosync/blob/gh-pages/README.md">README</a>.
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <img src="./assets/cloud-red.png" alt="Realtime Red cloud">
       </div>
     </div>
   </div>
-</div>
 
-<div class="section padding-extra white" id="demo" style="margin-top: -100px; min-height: 0px;">
-  <div id="wrap" style="margin: 0 auto; display: table;">
-    <div style="float: left; margin: 15px;">
-      <div id="player1"></div>
-      <div class="panel panel-default" style="margin-bottom: -30px;">
-        <div class="panel-heading">Video Player 1's Publish Stream:</div>
-        <div id="channel1" class="panel-body code" style="height: 100px; overflow: hidden;">
-          
-        </div>
+  <section class="red">
+    <div class="container">
+      <div class="col-sm-12 text-center">
+        <h4 class="text-thin"><span class="break">Start Building</span> Real-time Apps Now!</h4>
       </div>
-    </div>
-    <div style="float: left; margin: 15px;">
-      <div id="player2"></div>
-      <div class="panel panel-default"style="margin-bottom: -30px;">
-        <div class="panel-heading">Video Player 2's Publish Stream:</div>
-        <div id="channel2" class="panel-body code" style="height: 100px; overflow: hidden;">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<a name="tutorial"></a>
-
-<div class="section gray padding-extra">
-  <div class="container">
-    <div class="col-sm-5">
-      <div class="code-wrap flex">
-        <div class="code-header">
-          <ul>
-            <li class="red"><i class="fa fa-circle"></i></li>
-            <li class="yellow"><i class="fa fa-circle"></i></li>
-            <li class="green"><i class="fa fa-circle"></i></li>
-          </ul>
-        </div>
-        <div class="code-content">
-
-          <ol class="list-code animate" data-type="one">
-            <li class="code-line-wrap">
-              <ol class="code-line-numbers">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-              </ol>
-            </li>
-            <li style="font-style: italic;">// Initialize VideoSync</li>
-            <li>var <span class="blue">sync</span> = new VideoSync("RoomName", "UserName");</li>
-            <li><br></li>
-            <li><span style="font-style: italic;"> // Your standard YouTube embed code.</span></li>
-            <li>var player = new YT.player('player', {</li>
-            <li class="indent">videoId: <span class="red">'A9HV5O8Un6k'</span>, // The Video ID</li>
-            <li class="indent">events: { </li>
-            <li class="indent" style="padding: 0 0 0 40px"><span style="font-style: italic;">// Bind these 2 methods.</span></li>
-            <li class="indent" style="padding: 0 0 0 40px">'onReady': <span class="blue">sync.onPlayerReady</span>,</li>
-            <li class="indent" style="padding: 0 0 0 40px">'onStateChange': <span class="blue">sync.onPlayerStateChange</span></li>
-            <li class="indent">}</li>
-            <li>});</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-7">
-      <div class="headline h3">Adding Synchronized Playback.</div>
-      <p>
-        You can add synchronized playback to Embedded YouTube videos with two simple steps. <br>
-        First, initialize a VideoSync object by passing in a room name and a user name. <br>
-        Then, all you have to do is bind two  of VideoSync's methods to two event callbacks in your standard YouTube embed code.<br>
-        Voilà, you now have synchronized videos!
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="section white padding-extra">
-  <div class="container">
-    <div class="col-sm-9">
-      <div class="headline h3">But How Does it Work?</div>
-      <p>
-        YouTube's <a href="https://developers.google.com/youtube/iframe_api_reference">iFrame API</a> allows you to bind callbacks to changes to the state of the embedded YouTube player. When you initialize VideoSync, you bind VideoSync methods to the <code>onReady</code> event and the <code>onStateChange</code> event. When important state change events occur, they are published through the PubNub Global RealTime Network, and then other VideoSync clients will act accordingly. If you'd like to learn more about how VideoSync works, check out the <a href="http://larrywu.com/videosync/docs/annotated-source">annotated source</a> and the more detailed <a href="https://github.com/lw7360/videosync/blob/gh-pages/README.md">README</a>.
-      </p>
-    </div>
-    <div class="col-sm-3">
-      <img src="./assets/cloud-red.png" alt="Realtime Red cloud">
-    </div>
-  </div>
-</div>
-
-<!-- <div class="section padding-extra gray">
-  <div class="container">
-    <div class="col-sm-6">
-      <div class="headline h3">Blog Posts</div>
-      <ul>
-        <li><a href="">Blog 1</a></li>
-        <li><a href="">Blog 2</a></li>
-        <li><a href="">Blog 3</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-6">
-      <div class="headline h3">Features Used</div>
-      <ul>
-        <li><a href="http://www.pubnub.com/how-it-works/data-streams/" target="_blank">Data Streams</a></li>
-        <li><a href="http://www.pubnub.com/how-it-works/presence/" target="_blank">Presence</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
- -->
-
-<section class="red">
-  <div class="container">
-    <div class="col-sm-12 text-center">
-      <h4 class="text-thin"><span class="break">Start Building</span> Real-time Apps Now!</h4>
-    </div>
       <div class="col-sm-4"></div>
       <div class="col-sm-4">
         <a href="http://www.pubnub.com/get-started/#get-started" class="btn btn-white btn-large text-red text-center brt">Get Started</a>
       </div>
       <div class="col-sm-4"></div>
-  </div>
-</section>
-    <footer>
-      <div class="container">
+    </div>
+  </section>
+  <footer>
+    <div class="container">
 
-        <div class="row text-center">
+      <div class="row text-center">
 
-          <div class="col-sm-9 clearfix">
-            <nav class="nav-footer">
-              <ul class="nav">
-                <li class="first"><a href="http://www.pubnub.com/how-it-works/">How It Works</a></li>
-                <li><a href="http://www.pubnub.com/how-it-works/data-streams/">Data Streams</a></li>
-                <li><a href="http://www.pubnub.com/how-it-works/presence/">Presence</a></li>
-                <li><a href="http://www.pubnub.com/how-it-works/storage-and-playback/">Storage &amp; Playback</a></li>
-                <li><a href="http://www.pubnub.com/how-it-works/mobile/">Mobile Push Gateway</a></li>
-                <li><a href="http://www.pubnub.com/how-it-works/analytics/">Analytics</a></li>
-                <li><a href="http://www.pubnub.com/how-it-works/security/">Security</a></li>
-                <li><a href="http://www.pubnub.com/how-it-works/network/">Network</a></li>
-              </ul>
-              <ul class="nav">
-                <li class="first"><a href="http://www.pubnub.com/pricing/">Pricing</a></li>
-              </ul>
-              <ul class="nav">
-                <li class="first"><a href="http://www.pubnub.com/developers/">Developers</a></li>
-                <li><a href="http://www.pubnub.com/docs/javascript/javascript-sdk.html">Docs</a></li>
-                <li><a href="http://www.pubnub.com/console/">Dev Console</a></li>
-                <li><a href="https://help.pubnub.com/home" target="_blank">Support</a></li>
-                <li><a href="http://www.pubnub.com/demos/">Demos</a></li>
-                <li><a href="http://www.pubnub.com/quick-start-guides/">Quick Start Guides</a></li>
-                <li><a href="http://www.pubnub.com/docs/javascript/tutorial/data-push.html">Tutorials</a></li>
-                <li><a href="http://www.pubnub.com/websockets/">Websockets</a></li>
-              </ul>
-              <ul class="nav">
-                <li class="first"><a href="http://www.pubnub.com/customers/">Customers</a></li>
-              </ul>
-              <ul class="nav">
-                <li class="first"><a href="http://www.pubnub.com/company/">Company</a></li>
-                <li><a href="http://www.pubnub.com/company/team/">Team</a></li>
-                <li><a href="http://www.pubnub.com/company/leadership/">Leadership</a></li>
-                <li><a href="http://www.pubnub.com/press/">Press &amp; News</a></li>
-                <li><a href="http://www.pubnub.com/events/">Events</a></li>
-                <li><a href="http://www.pubnub.com/company/careers/">Careers</a></li>
-                <li><a href="http://www.pubnub.com/company/contact-us/">Contact Us</a></li>
-              </ul>
-              <ul class="nav">
-                <li class="first"><a href="http://www.pubnub.com/blog/">Blog</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="col-sm-3">
-            <nav class="nav-social pull-right">
-              <ul class="nav">
-                <li><a href="http://twitter.com/PubNub" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="http://www.linkedin.com/company/pubnub" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="http://www.facebook.com/PubNub" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="http://plus.google.com/116291363909949130218/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="http://www.pubnub.com/blog/feed/" target="_blank"><i class="fa fa-rss"></i></a></li>
-                <li><a href="http://vimeo.com/pubnub" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
-                <li><a href="http://www.youtube.com/pubnubtv" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-              </ul>
-            </nav>
-            <nav class="nav-footer pull-right ">
-              <ul class="nav text-right">
-                <li><small>© 2009-2014 PubNub, Inc.</small></li>
-                <li><a href="http://www.pubnub.com/terms-and-conditions/">Terms &amp; Conditions</a></li>
-                <li><a href="http://www.pubnub.com/privacy-policy/">Privacy Policy</a></li>
-              </ul>
-            </nav>
-          </div>
-
+        <div class="col-sm-9 clearfix">
+          <nav class="nav-footer">
+            <ul class="nav">
+              <li class="first"><a href="http://www.pubnub.com/how-it-works/">How It Works</a>
+              </li>
+              <li><a href="http://www.pubnub.com/how-it-works/data-streams/">Data Streams</a>
+              </li>
+              <li><a href="http://www.pubnub.com/how-it-works/presence/">Presence</a>
+              </li>
+              <li><a href="http://www.pubnub.com/how-it-works/storage-and-playback/">Storage &amp; Playback</a>
+              </li>
+              <li><a href="http://www.pubnub.com/how-it-works/mobile/">Mobile Push Gateway</a>
+              </li>
+              <li><a href="http://www.pubnub.com/how-it-works/analytics/">Analytics</a>
+              </li>
+              <li><a href="http://www.pubnub.com/how-it-works/security/">Security</a>
+              </li>
+              <li><a href="http://www.pubnub.com/how-it-works/network/">Network</a>
+              </li>
+            </ul>
+            <ul class="nav">
+              <li class="first"><a href="http://www.pubnub.com/pricing/">Pricing</a>
+              </li>
+            </ul>
+            <ul class="nav">
+              <li class="first"><a href="http://www.pubnub.com/developers/">Developers</a>
+              </li>
+              <li><a href="http://www.pubnub.com/docs/javascript/javascript-sdk.html">Docs</a>
+              </li>
+              <li><a href="http://www.pubnub.com/console/">Dev Console</a>
+              </li>
+              <li><a href="https://help.pubnub.com/home" target="_blank">Support</a>
+              </li>
+              <li><a href="http://www.pubnub.com/demos/">Demos</a>
+              </li>
+              <li><a href="http://www.pubnub.com/quick-start-guides/">Quick Start Guides</a>
+              </li>
+              <li><a href="http://www.pubnub.com/docs/javascript/tutorial/data-push.html">Tutorials</a>
+              </li>
+              <li><a href="http://www.pubnub.com/websockets/">Websockets</a>
+              </li>
+            </ul>
+            <ul class="nav">
+              <li class="first"><a href="http://www.pubnub.com/customers/">Customers</a>
+              </li>
+            </ul>
+            <ul class="nav">
+              <li class="first"><a href="http://www.pubnub.com/company/">Company</a>
+              </li>
+              <li><a href="http://www.pubnub.com/company/team/">Team</a>
+              </li>
+              <li><a href="http://www.pubnub.com/company/leadership/">Leadership</a>
+              </li>
+              <li><a href="http://www.pubnub.com/press/">Press &amp; News</a>
+              </li>
+              <li><a href="http://www.pubnub.com/events/">Events</a>
+              </li>
+              <li><a href="http://www.pubnub.com/company/careers/">Careers</a>
+              </li>
+              <li><a href="http://www.pubnub.com/company/contact-us/">Contact Us</a>
+              </li>
+            </ul>
+            <ul class="nav">
+              <li class="first"><a href="http://www.pubnub.com/blog/">Blog</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-sm-3">
+          <nav class="nav-social pull-right">
+            <ul class="nav">
+              <li><a href="http://twitter.com/PubNub" target="_blank"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a href="http://www.linkedin.com/company/pubnub" target="_blank"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <li><a href="http://www.facebook.com/PubNub" target="_blank"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a href="http://plus.google.com/116291363909949130218/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
+              </li>
+              <li><a href="http://www.pubnub.com/blog/feed/" target="_blank"><i class="fa fa-rss"></i></a>
+              </li>
+              <li><a href="http://vimeo.com/pubnub" target="_blank"><i class="fa fa-vimeo-square"></i></a>
+              </li>
+              <li><a href="http://www.youtube.com/pubnubtv" target="_blank"><i class="fa fa-youtube-play"></i></a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="nav-footer pull-right ">
+            <ul class="nav text-right">
+              <li><small>© 2009-2014 PubNub, Inc.</small>
+              </li>
+              <li><a href="http://www.pubnub.com/terms-and-conditions/">Terms &amp; Conditions</a>
+              </li>
+              <li><a href="http://www.pubnub.com/privacy-policy/">Privacy Policy</a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
       </div>
-    </footer>
 
-    <div id="get-started" class="modal-container">
-      <div class="form-wrap form-wrap-modal hide-labels">
-        <a href="http://www.pubnub.com/" class="close"><i class="fa fa-times-circle"></i></a>
-        <h3>Get Started</h3>
-        <div id="error-codes" class="alert alert-danger" style="display:none;"></div>
-<form id="sign-up-form-partial" action="https://admin.pubnub.com/api/users" method="POST" class="form-general">
+    </div>
+  </footer>
+
+  <div id="get-started" class="modal-container">
+    <div class="form-wrap form-wrap-modal hide-labels">
+      <a href="http://www.pubnub.com/" class="close"><i class="fa fa-times-circle"></i></a>
+      <h3>Get Started</h3>
+      <div id="error-codes" class="alert alert-danger" style="display:none;"></div>
+      <form id="sign-up-form-partial" action="https://admin.pubnub.com/api/users" method="POST" class="form-general">
         <label for="first-name">First Name</label>
         <input name="first" type="text" id="first-name" placeholder="First Name *" required="">
         <label for="last-name">Last Name</label>
@@ -449,110 +499,122 @@
         <p>By clicking <span id="create_account_text">Create Free Account</span>, you agree to <a href="http://www.pubnub.com/terms-and-conditions/" target="_blank">PubNub's terms and conditions</a>.</p>
         <input type="submit" value="Create Free Account" id="create_account_btn" class="btn btn-primary">
         <div id="utms">
-            <input id="utm_source" type="hidden" name="utm_source" value="">
-            <input id="utm_medium" type="hidden" name="utm_medium" value="">
-            <input id="utm_content" type="hidden" name="utm_content" value="">
-            <input id="utm_campaign" type="hidden" name="utm_campaign" value="">
-            <input id="utm_keyword" type="hidden" name="utm_keyword" value="">
+          <input id="utm_source" type="hidden" name="utm_source" value="">
+          <input id="utm_medium" type="hidden" name="utm_medium" value="">
+          <input id="utm_content" type="hidden" name="utm_content" value="">
+          <input id="utm_campaign" type="hidden" name="utm_campaign" value="">
+          <input id="utm_keyword" type="hidden" name="utm_keyword" value="">
         </div>
-</form>
-      </div>
-      <div class="modal-backdrop"></div>
+      </form>
     </div>
+    <div class="modal-backdrop"></div>
+  </div>
 
-    <script src="./assets/pubnub.min.js"></script>
-    <script src="./assets/main.js"></script>
- 
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="./videosync.js"></script>
- 
-    <script>
-      var tag = document.createElement('script');
+  <script src="./assets/pubnub.min.js"></script>
+  <script src="./assets/main.js"></script>
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./videosync.js"></script>
 
-      var playerVars = {
-        modestbranding: 1,
-        theme: 'light',
-        showinfo: 0,
-        rel: 0,
-        fs: 0
-      };
+  <script>
+    var tag = document.createElement('script');
 
-      var rand = Math.random().toString();
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      var vidSync1 = new VideoSync("A9HV5O8Un6k" + rand, "Player1");
-      var vidSync2 = new VideoSync("A9HV5O8Un6k" + rand, "Player2");
+    var playerVars = {
+      modestbranding: 1,
+      theme: 'light',
+      showinfo: 0,
+      rel: 0,
+      fs: 0
+    };
 
-      var player1;
-      var player2;
-      function onYouTubeIframeAPIReady() {
-        player1 = new YT.Player('player1', {
-          height: '390',
-          width: '640',
-          videoId: 'A9HV5O8Un6k',
-          playerVars: playerVars,
-          events: {
-            'onReady': vidSync1.onPlayerReady,
-            'onStateChange': vidSync1.onPlayerStateChange
-          }
-        });
-        
-        player2 = new YT.Player('player2', {
-          height: '390',
-          width: '640',
-          videoId: 'A9HV5O8Un6k',
-          playerVars: playerVars,
-          events: {
-            'onReady': vidSync2.onPlayerReady,
-            'onStateChange': vidSync2.onPlayerStateChange
-          }
-        });
-      }
+    var rand = Math.random().toString();
 
-      var pubnub = PUBNUB.init({
-          publish_key: 'demo',
-          subscribe_key: 'demo',
-          uuid: "the watcher"
-      });
+    var vidSync1 = new VideoSync("A9HV5O8Un6k" + rand, "Player1");
+    var vidSync2 = new VideoSync("A9HV5O8Un6k" + rand, "Player2");
 
-      pubnub.subscribe({
-        channel: "A9HV5O8Un6k" + rand,
-        callback: function(m) {
-          if (m.sender === "Player1") {
-            $("#channel1").prepend(JSON.stringify(m) + "<br>");
-          }
-          else if (m.sender === "Player2") {
-            $("#channel2").prepend(JSON.stringify(m) + "<br>");
-          }
+    var player1;
+    var player2;
+
+    function onYouTubeIframeAPIReady() {
+      player1 = new YT.Player('player1', {
+        height: '390',
+        width: '640',
+        videoId: 'A9HV5O8Un6k',
+        playerVars: playerVars,
+        events: {
+          'onReady': vidSync1.onPlayerReady,
+          'onStateChange': vidSync1.onPlayerStateChange
         }
       });
-      </script>    
 
-    <div id="loading">
-      <div class="mask"></div>
-      <div class="indication">
-        <img src="./assets/loading.gif">
-        <h3 class="text-red">Loading...</h3>
-      </div>
+      player2 = new YT.Player('player2', {
+        height: '390',
+        width: '640',
+        videoId: 'A9HV5O8Un6k',
+        playerVars: playerVars,
+        events: {
+          'onReady': vidSync2.onPlayerReady,
+          'onStateChange': vidSync2.onPlayerStateChange
+        }
+      });
+    }
+
+    var pubnub = PUBNUB.init({
+      publish_key: 'demo',
+      subscribe_key: 'demo',
+      uuid: "the watcher"
+    });
+
+    pubnub.subscribe({
+      channel: "A9HV5O8Un6k" + rand,
+      callback: function (m) {
+        if (m.sender === "Player1") {
+          $("#channel1").prepend(JSON.stringify(m) + "<br>");
+        } else if (m.sender === "Player2") {
+          $("#channel2").prepend(JSON.stringify(m) + "<br>");
+        }
+      }
+    });
+  </script>
+
+  <div id="loading">
+    <div class="mask"></div>
+    <div class="indication">
+      <img src="./assets/loading.gif">
+      <h3 class="text-red">Loading...</h3>
     </div>
+  </div>
   <script type="text/javascript">
-  /* <![CDATA[ */
-  var google_conversion_id = 1009365105;
-  var google_custom_params = window.google_tag_params;
-  var google_remarketing_only = true;
-  /* ]]> */
+    /* <![CDATA[ */
+    var google_conversion_id = 1009365105;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
   </script>
   <script type="text/javascript" src="./assets/conversion.js">
-  </script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./assets/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" style="display: none !important;">&lt;img height="1" width="1" border="0" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1009365105/?frame=0&amp;random=1404231211816&amp;cv=7&amp;fst=1404231211816&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=1440&amp;u_w=2560&amp;u_ah=1418&amp;u_aw=2560&amp;u_cd=24&amp;u_his=1&amp;u_tz=-420&amp;u_java=true&amp;u_nplug=14&amp;u_nmime=72&amp;frm=0&amp;url=http%3A//www.pubnub.com/style-guide/demo-template/&amp;ref=http%3A//getpocket.com/a/queue/" /&gt;</iframe>
+  </script>
+  <iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./assets/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" style="display: none !important;">&lt;img height="1" width="1" border="0" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1009365105/?frame=0&amp;random=1404231211816&amp;cv=7&amp;fst=1404231211816&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=1440&amp;u_w=2560&amp;u_ah=1418&amp;u_aw=2560&amp;u_cd=24&amp;u_his=1&amp;u_tz=-420&amp;u_java=true&amp;u_nplug=14&amp;u_nmime=72&amp;frm=0&amp;url=http%3A//www.pubnub.com/style-guide/demo-template/&amp;ref=http%3A//getpocket.com/a/queue/" /&gt;</iframe>
   <noscript>
-  &lt;div style="display:inline;"&gt;
-  &lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1009365105/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
-  &lt;/div&gt;
+    &lt;div style="display:inline;"&gt; &lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1009365105/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt; &lt;/div&gt;
   </noscript>
-  <script type="text/javascript">var bf_url="pubnub";(function(){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="//d2sdf28wg0skh3.cloudfront.net/bf.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
-  
+  <script type="text/javascript">
+    var bf_url = "pubnub";
+    (function () {
+      var e = document.createElement("script");
+      e.type = "text/javascript";
+      e.async = !0;
+      e.src = "//d2sdf28wg0skh3.cloudfront.net/bf.min.js";
+      var t = document.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(e, t)
+    })();
+  </script>
 
-<script type="text/javascript" src="chrome-extension://bmdblncegkenkacieihfhpjfppoconhi/in-page-script.js"></script></body></html>
+
+  <script type="text/javascript" src="chrome-extension://bmdblncegkenkacieihfhpjfppoconhi/in-page-script.js"></script>
+</body>
+
+</html>
