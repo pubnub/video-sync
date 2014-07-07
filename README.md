@@ -2,7 +2,7 @@
 
 ## Introduction
 
-VideoSync is an API that makes it easy to synchronize playback for embeddable YouTube videos across multiples browsers. Play, pause, and seek in synch across multiple YouTube players.
+VideoSync is an API that synchronizes the playback of embedded YouTube videos across multiples browsers. Play and pause your videos in sync.
 
 ### [Live Demo](http://larrywu.com/videosync/)
 
@@ -16,7 +16,7 @@ import the PubNub SDK and videosync.js.
     <script src="http://cdn.pubnub.com/pubnub.min.js"></script>
     <script src=./videosync.js></script>
     
-Then, use an iframe to embed the YouTube video you want to synchronize. To learn more about the art of embedding YouTube videos, check out Google's official [YouTube API Reference](https://developers.google.com/youtube/iframe_api_reference). Essentially, all you need to do is create a div for the player to go. Then, you can load the IFrame player API code asynchronously. 
+Then, use an Iframe to embed the YouTube video you want to synchronize. To learn more about the art of embedding YouTube videos, check out Google's official [YouTube API Reference](https://developers.google.com/youtube/iframe_api_reference). Essentially, all you need to do is create a div for the player to go. Then, you can load the Iframe player API code asynchronously. 
 
     <div id="player"></div>
     
