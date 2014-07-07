@@ -186,23 +186,9 @@
                 if (frame) {
                     innerDoc = (frame.contentDocument) ? frame.contentDocument : frame.contentWindow.document;
                     $('#' + frameId).height(innerDoc.body.scrollHeight);
-                    console.log(innerDoc);
                 }
             } catch (err) {}
         }
-        
-        // $(function() {
-        //     var $frame = $('<iframe class="section" id="docco-iframe" src="./videosync.html" style="width:100%; background-color: #f5cfd3;" onload="setFrameHeight(' + "'" + 'docco-iframe' + "'" + ')"></iframe>');
-        //     $('header').after( $frame );
-        //     setTimeout( function() {
-        //         var doc = $frame[0].contentWindow.document;
-        //         var $body = $('body',doc);
-        //         console.log($body);
-        //         $body.html("<h1>ssss</h1>");
-        //     }, 1 );
-        // });
-
-
     </script>
 
   <iframe class="section" id="docco-iframe" src="./videosync.html" style="width:100%; background-color: #f5cfd3;" onload="setFrameHeight('docco-iframe')"></iframe>
