@@ -16,19 +16,18 @@ import the PubNub SDK along with [videosync.js](https://github.com/lw7360/videos
     <script src="http://cdn.pubnub.com/pubnub.min.js"></script>
     <script src=./videosync.js></script>
     
-Then, use an iframe to embed the YouTube video you want to synchronize. To learn more about the art of embedding YouTube videos, check out Google's official [YouTube API Reference](https://developers.google.com/youtube/iframe_api_reference). Essentially, all you need to do is create a div for the player to go. Then, you can load the Iframe player API code asynchronously. 
+Then you have to setup an iframe and embed the YouTube video you want to synchronize. To learn more about the art of embedding YouTube videos, check out Google's official [YouTube API Reference](https://developers.google.com/youtube/iframe_api_reference). Basically, all you need to do is create a div for the player to go. Then, you can load the iframe player API code asynchronously. 
 
     <div id="player"></div>
     
     <script>
       var tag = document.createElement('script');
-      
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     </script>
 
-After loading the YouTube Iframe player API code, you should initialize VideoSync. When you do so you'll need the id of a YouTube video you want to play.
+After loading the YouTube Iframe player API code, you should initialize VideoSync. When initializing VideoSync
 
     var videosync = new VideoSync("pRIaU172aKM"); // https://www.youtube.com/watch?v=[VIDEO_ID]
     
