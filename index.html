@@ -334,9 +334,9 @@
         <div class="headline h3">Adding Synchronized Playback.</div>
         <p>
           You can add synchronized playback to Embedded YouTube videos with two simple steps.
-          <br>First, initialize a VideoSync object by passing in a room name and a user name.
+          <br>First, initialize a VideoSync object with a room name and a user name.
           <br>Then, all you have to do is bind two of VideoSync's methods to two event callbacks in your standard YouTube embed code.
-          <br>Voilà, you now have synchronized videos!
+          <br>Voilà, you now have synchronized YouTube videos!
         </p>
       </div>
     </div>
@@ -347,7 +347,7 @@
       <div class="col-sm-9">
         <div class="headline h3">But How Does it Work?</div>
         <p>
-          YouTube's <a href="https://developers.google.com/youtube/iframe_api_reference">iFrame API</a> allows you to bind callbacks to changes to the state of the embedded YouTube player. When you initialize VideoSync, you bind VideoSync methods to the <code>onReady</code> event and the <code>onStateChange</code> event. When important state change events occur, they are published through the PubNub Global RealTime Network, and then other VideoSync clients will act accordingly. If you'd like to learn more about how VideoSync works, check out the <a href="http://larrywu.com/videosync/docs/annotated-source">annotated source</a> and the more detailed <a href="https://github.com/lw7360/videosync/blob/gh-pages/README.md">README</a>.
+          YouTube's <a href="https://developers.google.com/youtube/iframe_api_reference">iframe API</a> allows you to bind callbacks to state events of the embedded YouTube player. When you initialize VideoSync, you bind VideoSync methods to the <code>onReady</code> event and the <code>onStateChange</code> event. When important state change events occur, they are published through the PubNub Global RealTime Network, and then other VideoSync clients will act accordingly. If you'd like to learn more about how VideoSync works, check out the <a href="http://larrywu.com/videosync/docs/annotated-source">annotated source</a> and the more detailed <a href="https://github.com/lw7360/videosync/blob/gh-pages/README.md">README</a>.
         </p>
       </div>
       <div class="col-sm-3">
@@ -517,7 +517,6 @@
   <script src="./videosync.js"></script>
 
   <script>
-
     var consolePrint = function(msg) {
       var divId = "channel1";
       if (msg.sender === "Player2") {
