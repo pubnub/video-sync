@@ -517,6 +517,21 @@
   <script src="./videosync.js"></script>
 
   <script>
+
+    var consolePrint = function(msg) {
+      var divId = "channel1";
+      if (msg.sender === "Player2") {
+        divId = "channel2";
+      }
+      var time = msg.time;
+      if (time === null) {
+        $("#" + divId).prepend("{type: " + msg.type + "}<br>");
+      }
+      else {
+        $("#" + divId).prepend("{type: " + msg.type + ", time: " + time + "}<br>");
+      }
+    };
+
     var tag = document.createElement('script');
 
     tag.src = "https://www.youtube.com/iframe_api";
@@ -571,13 +586,7 @@
 
     pubnub.subscribe({
       channel: "A9HV5O8Un6k" + rand,
-      callback: function (m) {
-        if (m.sender === "Player1") {
-          $("#channel1").prepend(JSON.stringify(m) + "<br>");
-        } else if (m.sender === "Player2") {
-          $("#channel2").prepend(JSON.stringify(m) + "<br>");
-        }
-      }
+      callback: consolePrint
     });
   </script>
 
