@@ -28,8 +28,8 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <p>VideoSync is an open source API that let’s you synchronize iframe embedded 
-YouTube videos, with the <a href="http://www.pubnub.com">PubNub Global Realtime Network</a></p>
+              <p>VideoSync is an API that synchronizes the playback of embedded 
+YouTube videos across multiples browsers.</p>
 <p>You can check out the demo right <a href="http://larrywu.com/videosync/">here</a>, or
 view the source on <a href="https://github.com/lw7360/videosync/">Github</a></p>
 
@@ -77,9 +77,9 @@ userId is an optional variable that will identify individual users of VideoSync.
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">if</span> (userId === <span class="hljs-literal">undefined</span>) {
-    userId = <span class="hljs-built_in">Math</span>.random().toString();
-  }</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span> (userId === <span class="hljs-literal">undefined</span>) {
+        userId = <span class="hljs-built_in">Math</span>.random().toString();
+    }</pre></div></div>
             
         </li>
         
@@ -94,7 +94,7 @@ userId is an optional variable that will identify individual users of VideoSync.
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> player;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> player;</pre></div></div>
             
         </li>
         
@@ -105,11 +105,15 @@ userId is an optional variable that will identify individual users of VideoSync.
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-6">&#182;</a>
               </div>
-              <p>PubNub</p>
+              <p>Initializing PubNub with demo keys and our userId.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> pubnub;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> pubnub = PUBNUB.init({
+        publish_key: <span class="hljs-string">'demo'</span>,
+        subscribe_key: <span class="hljs-string">'demo'</span>,
+        uuid: userId
+    });</pre></div></div>
             
         </li>
         
@@ -124,7 +128,7 @@ userId is an optional variable that will identify individual users of VideoSync.
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> linkStart = <span class="hljs-literal">false</span>;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> linkStart = <span class="hljs-literal">false</span>;</pre></div></div>
             
         </li>
         
@@ -139,7 +143,7 @@ userId is an optional variable that will identify individual users of VideoSync.
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> lastMsg;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> lastMsg;</pre></div></div>
             
         </li>
         
@@ -150,23 +154,23 @@ userId is an optional variable that will identify individual users of VideoSync.
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-9">&#182;</a>
               </div>
-              <p>A helper function that sends properly formatted YouTube messages.</p>
+              <p>A helper function that publishes state-change messages.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> pub = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(type, time)</span> {</span>
-    <span class="hljs-keyword">if</span> (lastMsg !== <span class="hljs-string">""</span> + type + time) {
-      pubnub.publish({
-        channel: roomId,
-        message: {
-          recipient: <span class="hljs-string">""</span>,
-          sender: userId,
-          type: type,
-          time: time,
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> pub = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(type, time)</span> {</span>
+        <span class="hljs-keyword">if</span> (lastMsg !== <span class="hljs-string">""</span> + type + time) {
+            pubnub.publish({
+                channel: roomId,
+                message: {
+                    recipient: <span class="hljs-string">""</span>,
+                    sender: userId,
+                    type: type,
+                    time: time,
+                }
+            });
         }
-      });
-    }
-  };</pre></div></div>
+    };</pre></div></div>
             
         </li>
         
@@ -177,11 +181,11 @@ userId is an optional variable that will identify individual users of VideoSync.
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-10">&#182;</a>
               </div>
-              <p>The function that keeps it all in sync. You dah real mvp.</p>
+              <p>The function that keeps the video in sync.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> keepSync = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> keepSync = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span></pre></div></div>
             
         </li>
         
@@ -192,11 +196,11 @@ userId is an optional variable that will identify individual users of VideoSync.
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-11">&#182;</a>
               </div>
-              <p><a href="https://www.youtube.com/watch?v=h7aC-TIkF3I&amp;feature=youtu.be">Our link has started.</a></p>
+              <p><a href="https://www.youtube.com/watch?v=h7aC-TIkF3I&amp;feature=youtu.be">Link Start!</a></p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    linkStart = <span class="hljs-literal">true</span>;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        linkStart = <span class="hljs-literal">true</span>;</pre></div></div>
             
         </li>
         
@@ -207,11 +211,11 @@ userId is an optional variable that will identify individual users of VideoSync.
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-12">&#182;</a>
               </div>
-              <p>The initial starting time of the video we’re watching.</p>
+              <p>The initial starting time of the current video.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> time = player.getCurrentTime();</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">var</span> time = player.getCurrentTime();</pre></div></div>
             
         </li>
         
@@ -222,15 +226,40 @@ userId is an optional variable that will identify individual users of VideoSync.
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-13">&#182;</a>
               </div>
-              <p>Initializing PubNub with demo keys and our userId.</p>
+              <p>Subscribing to our PubNub channel.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    pubnub = PUBNUB.init({
-      publish_key: <span class="hljs-string">'demo'</span>,
-      subscribe_key: <span class="hljs-string">'demo'</span>,
-      uuid: userId
-    });</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        pubnub.subscribe({
+            channel: roomId,
+            callback: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(m)</span> {</span>
+                lastMsg = m.recipient + m.type + m.time;
+                <span class="hljs-keyword">if</span> ((m.recipient === userId || m.recipient === <span class="hljs-string">""</span>) &amp;&amp; m.sender !== userId) {
+                    <span class="hljs-keyword">if</span> (m.type === <span class="hljs-string">"updateRequest"</span>) {
+                        <span class="hljs-keyword">var</span> curState = player.getPlayerState();
+                        <span class="hljs-keyword">var</span> curTime = player.getCurrentTime();
+                        pubnub.publish({
+                            channel: roomId,
+                            message: {
+                                type: <span class="hljs-string">"updateResponse"</span>,
+                                time: curTime,
+                                recipient: m.sender
+                            }
+                        });
+                    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m.type === <span class="hljs-string">"pause"</span>) {
+                        player.seekTo(m.time, <span class="hljs-literal">true</span>);
+                        time = m.time;
+                        player.pauseVideo();
+                    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m.type === <span class="hljs-string">"play"</span>) {
+                        <span class="hljs-keyword">if</span> (m.time !== <span class="hljs-literal">null</span>) {
+                            player.seekTo(m.time, <span class="hljs-literal">true</span>);
+                        }
+                        player.playVideo();
+                    }
+                }
+            },
+            presence: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(m)</span> {</span>}
+        });</pre></div></div>
             
         </li>
         
@@ -241,40 +270,25 @@ userId is an optional variable that will identify individual users of VideoSync.
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-14">&#182;</a>
               </div>
-              <p>Subscribing to our channel.</p>
+              <p>Intermittently checks whether the video player has jumped ahead or
+behind the current time.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    pubnub.subscribe({
-      channel: roomId,
-      callback: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(m)</span> {</span>
-        lastMsg = m.recipient + m.type + m.time;
-        <span class="hljs-keyword">if</span> ((m.recipient === userId || m.recipient === <span class="hljs-string">""</span>) &amp;&amp; m.sender !== userId) {
-          <span class="hljs-keyword">if</span> (m.type === <span class="hljs-string">"updateRequest"</span>) {
-            <span class="hljs-keyword">var</span> curState = player.getPlayerState();
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">var</span> z = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
             <span class="hljs-keyword">var</span> curTime = player.getCurrentTime();
-            pubnub.publish({
-              channel: roomId,
-              message: {
-                type: <span class="hljs-string">"updateResponse"</span>,
-                time: curTime,
-                recipient: m.sender
-              }
-            });
-          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m.type === <span class="hljs-string">"pause"</span>) {
-            player.seekTo(m.time, <span class="hljs-literal">true</span>);
-            time = m.time;
-            player.pauseVideo();
-          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m.type === <span class="hljs-string">"play"</span>) {
-            <span class="hljs-keyword">if</span> (m.time !== <span class="hljs-literal">null</span>) {
-              player.seekTo(m.time, <span class="hljs-literal">true</span>);
+            <span class="hljs-keyword">var</span> curState = player.getPlayerState();
+            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Math</span>.abs(curTime - time) &gt; <span class="hljs-number">1</span>) {
+                <span class="hljs-keyword">if</span> (curState === <span class="hljs-number">2</span>) {
+                    pub(<span class="hljs-string">"pause"</span>, curTime);
+                    player.pauseVideo();
+                } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (curState === <span class="hljs-number">1</span>) {
+                    player.pauseVideo();
+                }
             }
-            player.playVideo();
-          }
-        }
-      },
-      presence: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(m)</span> {</span>}
-    });</pre></div></div>
+            time = curTime;
+        }, <span class="hljs-number">500</span>);
+    };</pre></div></div>
             
         </li>
         
@@ -285,26 +299,9 @@ userId is an optional variable that will identify individual users of VideoSync.
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-15">&#182;</a>
               </div>
-              <p>Intermittently check whether the video player has jumped ahead or
-behind further than we expected. This has to be done since the
-YouTube video player has no “seek” event.</p>
+              <h2 id="public-methods">Public Methods</h2>
 
             </div>
-            
-            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> z = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
-      <span class="hljs-keyword">var</span> curTime = player.getCurrentTime();
-      <span class="hljs-keyword">var</span> curState = player.getPlayerState();
-      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Math</span>.abs(curTime - time) &gt; <span class="hljs-number">1</span>) {
-        <span class="hljs-keyword">if</span> (curState === <span class="hljs-number">2</span>) {
-          pub(<span class="hljs-string">"pause"</span>, curTime);
-          player.pauseVideo();
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (curState === <span class="hljs-number">1</span>) {
-          player.pauseVideo();
-        }
-      }
-      time = curTime;
-    }, <span class="hljs-number">500</span>);
-  };</pre></div></div>
             
         </li>
         
@@ -315,9 +312,10 @@ YouTube video player has no “seek” event.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-16">&#182;</a>
               </div>
-              <h2 id="public-methods">Public Methods</h2>
-
+              
             </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">return</span> {</pre></div></div>
             
         </li>
         
@@ -328,10 +326,16 @@ YouTube video player has no “seek” event.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-17">&#182;</a>
               </div>
-              
+              <p>Should be bound to the YouTube player <code>onReady</code> event.</p>
+
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">return</span> {</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        onPlayerReady: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(event)</span> {</span>
+            player = event.target;
+            event.target.playVideo();
+            event.target.pauseVideo();
+            keepSync();
+        },</pre></div></div>
             
         </li>
         
@@ -342,16 +346,12 @@ YouTube video player has no “seek” event.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-18">&#182;</a>
               </div>
-              <p>Should be bound to the YouTube player <code>onReady</code> event.</p>
+              <p>Should be bound to the YouTube player <code>onStateChange</code> event.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    onPlayerReady: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(event)</span> {</span>
-      player = event.target;
-      event.target.playVideo();
-      event.target.pauseVideo();
-      keepSync();
-    },</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        onPlayerStateChange: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(event)</span> {</span>
+            <span class="hljs-keyword">if</span> (linkStart) {</pre></div></div>
             
         </li>
         
@@ -362,12 +362,13 @@ YouTube video player has no “seek” event.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-19">&#182;</a>
               </div>
-              <p>Should be bound to the YouTube player <code>onStateChange</code> event.</p>
+              <p>Play event.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    onPlayerStateChange: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(event)</span> {</span>
-      <span class="hljs-keyword">if</span> (linkStart) {</pre></div></div>
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">if</span> (event.data === <span class="hljs-number">1</span>) {
+                    pub(<span class="hljs-string">"play"</span>, <span class="hljs-literal">null</span>);
+                }</pre></div></div>
             
         </li>
         
@@ -382,29 +383,12 @@ YouTube video player has no “seek” event.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">if</span> (event.data === <span class="hljs-number">2</span>) {
-          pub(<span class="hljs-string">"pause"</span>, player.getCurrentTime());
-        }</pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-21">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-21">&#182;</a>
-              </div>
-              <p>Play event.</p>
-
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (event.data === <span class="hljs-number">1</span>) {
-          pub(<span class="hljs-string">"play"</span>, <span class="hljs-literal">null</span>);
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (event.data === <span class="hljs-number">2</span>) {
+                    pub(<span class="hljs-string">"pause"</span>, player.getCurrentTime());
+                }
+            }
         }
-      }
-    }
-  };
+    };
 }</pre></div></div>
             
         </li>

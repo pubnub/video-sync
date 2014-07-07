@@ -3,6 +3,8 @@
 // 
 // You can check out the demo right [here](http://larrywu.com/videosync/), or
 // view the source on [Github](https://github.com/lw7360/videosync/)
+
+
 // Setup
 // ---
 // roomId is the name of the channel you want to use.
@@ -29,7 +31,7 @@ function VideoSync(roomId, userId) {
     // The contents of the most recently received message.
     var lastMsg;
 
-    // A helper function that sends properly formatted YouTube messages.
+    // A helper function that publishes state-change messages.
     var pub = function (type, time) {
         if (lastMsg !== "" + type + time) {
             pubnub.publish({
@@ -44,15 +46,15 @@ function VideoSync(roomId, userId) {
         }
     };
 
-    // The function that keeps it all in sync. You dah real mvp.
+    // The function that keeps the video in sync.
     var keepSync = function () {
-        // [Our link has started.](https://www.youtube.com/watch?v=h7aC-TIkF3I&feature=youtu.be)
+        // [Link Start!](https://www.youtube.com/watch?v=h7aC-TIkF3I&feature=youtu.be)
         linkStart = true;
 
-        // The initial starting time of the video we're watching.
+        // The initial starting time of the current video.
         var time = player.getCurrentTime();
 
-        // Subscribing to our channel.
+        // Subscribing to our PubNub channel.
         pubnub.subscribe({
             channel: roomId,
             callback: function (m) {
@@ -84,9 +86,8 @@ function VideoSync(roomId, userId) {
             presence: function (m) {}
         });
 
-        // Intermittently check whether the video player has jumped ahead or
-        // behind further than we expected. This has to be done since the
-        // YouTube video player has no "seek" event.
+        // Intermittently checks whether the video player has jumped ahead or
+        // behind the current time.
         var z = setInterval(function () {
             var curTime = player.getCurrentTime();
             var curState = player.getPlayerState();
@@ -115,13 +116,13 @@ function VideoSync(roomId, userId) {
         // Should be bound to the YouTube player `onStateChange` event.
         onPlayerStateChange: function (event) {
             if (linkStart) {
-                // Pause event.
-                if (event.data === 2) {
-                    pub("pause", player.getCurrentTime());
-                }
                 // Play event.
-                else if (event.data === 1) {
+                if (event.data === 1) {
                     pub("play", null);
+                }
+                // Pause event.
+                else if (event.data === 2) {
+                    pub("pause", player.getCurrentTime());
                 }
             }
         }
