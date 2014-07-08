@@ -106,3 +106,4 @@ Now we can detect when the player plays, pauses, or seeks, so we can synchronize
 
 ## More?
 
+For more examples of what you can do with the PubNub Global Realtime Network, check out the [PubNub Blog](http://www.pubnub.com/blog/).
