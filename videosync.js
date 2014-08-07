@@ -20,8 +20,8 @@ function VideoSync(roomId, userId) {
 
     // Initializing PubNub with demo keys and our userId.
     var pubnub = PUBNUB.init({
-        publish_key: 'demo',
-        subscribe_key: 'demo',
+        publish_key: 'pub-c-242fbbf1-4cc6-4153-8f20-a671697f15ec',
+        subscribe_key: 'sub-c-2361676c-1e85-11e4-bbbf-02ee2ddab7fe',
         uuid: userId
     });
 
