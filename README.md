@@ -1,4 +1,4 @@
-# Synchronized YouTube Videos
+# Synchronizing YouTube Videos
 
 ## Introduction
 
@@ -6,12 +6,12 @@ VideoSync is an API that synchronizes the playback of embedded YouTube videos ac
 
 ### [Live Demo](http://pubnub.github.io/video-sync/)
 
-### [GitHub Repo](https://github.com/pubnub/videosync)
+### [GitHub Repo](https://github.com/pubnub/video-sync)
 
 ## Getting Started
 
 VideoSync uses the PubNub Global Realtime Network, so to get started you'll have to
-import the PubNub SDK along with [videosync.js](https://github.com/pubnub/videosync/blob/gh-pages/videosync.js).
+import the PubNub SDK along with [videosync.js](https://github.com/pubnub/video-sync/blob/gh-pages/videosync.js).
 
     <script src="http://cdn.pubnub.com/pubnub.min.js"></script>
     <script src=./videosync.js></script>
@@ -53,7 +53,7 @@ After binding these events, you're all set to have a synched YouTube experience.
 
 ## Implementation Details
 
-So how does VideoSync work? If you would rather not dive into the [source](https://github.com/pubnub/videosync/blob/gh-pages/videosync.js) or even the [annotated source](http://pubnub.github.io/video-sync/docs/annotated-source), I'll give the gist of how it works here.
+So how does VideoSync work? If you would rather not dive into the [source](https://github.com/pubnub/video-sync/blob/gh-pages/videosync.js) or even the [annotated source](http://pubnub.github.io/video-sync/docs/annotated-source), I'll give the gist of how it works here.
 
 
 ### The Iframe player API
