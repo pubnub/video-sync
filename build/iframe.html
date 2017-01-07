@@ -28,7 +28,7 @@
 
 <body id="app">
   <div class="section" id="demo" style="min-height: 0px;">
-    <div id="wrap" style="margin: 0 auto; display: table; width: 1024px;">
+    <div id="wrap" style="display: table;">
       <div style="float: left; margin: 15px;">
         <div id="player1"></div>
         <div class="panel panel-default" style="margin-bottom: -30px;">
@@ -51,7 +51,7 @@
   </div>
 
   <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.3.3.js"></script>
-  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="./videosync.js"></script>
 
   <script>
@@ -92,7 +92,7 @@
     var player2;
 
     function onYouTubeIframeAPIReady() {
-      var scale = 0.75;
+      var scale = 0.50;
       player1 = new YT.Player('player1', {
         height: (390*scale)+'',
         width: (640*scale)+'',
